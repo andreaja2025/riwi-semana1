@@ -1,0 +1,15 @@
+URL: http://127.0.0.1:5500/rueda-libre/index.html
+PROTOCOLO: HTTP
+HOST: Local Host
+PUERTO:5500
+RUTA: file:///home/cohorte8/riwi-semana1/rueda-libre/index.html 
+MÉTODO DE PETICIÓN: Get
+CÓDIGO DE ESTADO: 304
+
+AL cambiar en la ruta de direcciones por una ruta que no existe en mi proyecto, en la pagina me aparece el mensaje "Cannot GET /rueda-libre/promociones.html"
+Y al inspeccionar en network aparece status 404 que significa que el servidor no pudo encontrar la dirección de la petición solicitada.
+
+¿Qué rol cumplirán?: Ejemplo "Un carro"
+HTML: Son las piezas que conforman a un carro.
+CSS : Es el color del carro, los stikers, todo lo visual.
+JavaScript: Son los circuitos eléctricos y mecánicos que hacen que el carro funcione.
