@@ -109,3 +109,11 @@ paginas/reservas.html
     ├── Nombre del negocio
     ├── Correo electrónico
     └── Derechos reservados
+
+Justificación de los controles elegidos:
+
+1. Correo electrónico (`type="email"`): permite validar que el correo tenga un formato adecuado.
+
+2. Tipo de bicicleta (`type="radio"`): permite seleccionar una sola opción entre urbana, montaña y eléctrica.
+
+3. Cantidad de bicicletas (`type="number"`): permite ingresar una cantidad numérica y establecer un mínimo de una bicicleta mediante min="1"
