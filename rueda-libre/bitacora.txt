@@ -179,3 +179,39 @@ Campo: Políticas de alquiler
 Dato de prueba: Casilla sin marcar
 Resultado esperado: Rechazado por no aceptar las políticas
 Resultado obtenido: __________
+
+MINIRETO: AUDITORÍA DE ACCESIBILIDAD, CONTRASTE Y PUBLICACIÓN
+
+AUDITORÍA DE ACCESIBILIDAD
+
+Hallazgo 1: Idioma del documento.
+Corrección: Se utiliza lang="es" en las tres páginas HTML para identificar el idioma español.
+
+Hallazgo 2: Texto alternativo de las imágenes.
+Corrección: Se revisó que las imágenes tengan un atributo alt descriptivo cuando transmiten información. Las imágenes decorativas deben utilizar alt="" si no aportan información adicional.
+
+Hallazgo 3: Jerarquía de encabezados.
+Corrección: Se revisaron los encabezados para mantener una jerarquía lógica, con un h1 principal y encabezados h2 y h3 según las secciones y subsecciones.
+
+Hallazgo 4: Textos de los enlaces.
+Corrección: Se revisaron los enlaces para que describan su destino, por ejemplo, "Consultar tarifas y recorridos" y "Volver al inicio".
+
+Hallazgo 5: Navegación por teclado.
+Corrección: Se comprobó el recorrido mediante Tab y Shift + Tab. En el formulario se revisó la selección de opciones con las flechas, la activación de casillas con la barra espaciadora y el envío con Enter.
+
+MAPA DE USO DE COLOR
+
+erde Ruta: #1E7A4F
+Uso: Botones y enlaces con texto blanco. Contraste blanco sobre verde: 5.31:1. Apto para texto normal.
+
+Naranja Pedal: #F39A2B
+Uso: Destacados y botones secundarios con texto Azul Noche. Contraste azul sobre naranja: 7.20:1. Apto para texto normal. No usar texto blanco sobre naranja, porque el contraste es 2.22:1.
+
+Azul Noche: #14213D
+Uso: Títulos, encabezados y texto sobre fondos naranja o crema. Contraste azul sobre crema: 14.83:1. Apto para texto normal.
+
+Crema: #FAF6EF
+Uso: Fondo general del sitio. Admite texto Azul Noche, Gris Asfalto y Verde Ruta.
+
+Gris Asfalto: #5B6470
+Uso: Texto secundario sobre fondo crema. Contraste: 5.57:1. Apto para texto normal.

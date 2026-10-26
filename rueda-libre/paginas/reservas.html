@@ -3,40 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Reserva tu bicicleta con Rueda Libre. Selecciona la fecha, el tipo de bicicleta, el plan de alquiler y tu recorrido guiado.">
+    <meta name="author" content="Andrea Arias">
+    <meta name="description" content="Reserva una bicicleta con Rueda Libre en Medellín. Selecciona la fecha, el tipo de bicicleta, el plan de alquiler y tu recorrido guiado.">
     <title>Reservas | Rueda Libre</title>
+
+    <link rel="stylesheet" href="../css/estilos.css">
 </head>
 
 <body>
     <header>
-        <a href="../index.html">
+        <a href="../index.html" aria-label="Rueda Libre, ir al inicio">
             <img src="../img/bicycle.png"
-                 alt="Logo de Rueda Libre"
+                 alt="Logotipo de Rueda Libre"
                  width="200"
                  height="200">
         </a>
 
         <h1>Reserva tu bicicleta</h1>
 
-        <nav>
+        <nav aria-label="Navegación principal">
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="tarifas.html">Tarifas y rutas</a></li>
-                <li><a href="reservas.html">Reservas</a></li>
+                <li><a href="tarifas.html">Consultar tarifas y recorridos</a></li>
+                <li><a href="reservas.html" aria-current="page">Reservas</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section id="formulario-reserva">
-            <h2>Formulario de reserva</h2>
+    <main id="contenido-principal">
+        <section id="formulario-reserva" aria-labelledby="titulo-formulario">
+            <h2 id="titulo-formulario">Formulario de reserva</h2>
+
+            <p>
+                Completa los campos obligatorios para solicitar el alquiler
+                de tu bicicleta. Los campos marcados como obligatorios deben
+                diligenciarse antes de enviar el formulario.
+            </p>
 
             <form action="#" method="post">
                 <fieldset>
                     <legend>Tus datos</legend>
 
                     <p>
-                        <label for="nombre">Nombre completo:</label>
+                        <label for="nombre">Nombre completo (obligatorio):</label>
                         <input type="text"
                                id="nombre"
                                name="nombre"
@@ -46,18 +55,23 @@
                     </p>
 
                     <p>
-                        <label for="documento">Número de documento:</label>
+                        <label for="documento">Número de documento (obligatorio):</label>
                         <input type="text"
                                id="documento"
                                name="documento"
+                               autocomplete="off"
                                inputmode="numeric"
                                pattern="[0-9]{6,10}"
                                title="Ingresa entre 6 y 10 dígitos numéricos, sin puntos ni espacios."
+                               aria-describedby="ayuda-documento"
                                required>
+                        <small id="ayuda-documento">
+                            Ingresa entre 6 y 10 números, sin espacios ni signos.
+                        </small>
                     </p>
 
                     <p>
-                        <label for="correo">Correo electrónico:</label>
+                        <label for="correo">Correo electrónico (obligatorio):</label>
                         <input type="email"
                                id="correo"
                                name="correo"
@@ -66,7 +80,7 @@
                     </p>
 
                     <p>
-                        <label for="celular">Celular:</label>
+                        <label for="celular">Celular (obligatorio):</label>
                         <input type="tel"
                                id="celular"
                                name="celular"
@@ -74,7 +88,11 @@
                                inputmode="numeric"
                                pattern="3[0-9]{9}"
                                title="Ingresa 10 dígitos y comienza por 3. Ejemplo: 3001234567."
+                               aria-describedby="ayuda-celular"
                                required>
+                        <small id="ayuda-celular">
+                            Debe tener 10 dígitos y comenzar por 3.
+                        </small>
                     </p>
                 </fieldset>
 
@@ -82,44 +100,51 @@
                     <legend>Tu alquiler</legend>
 
                     <p>
-                        <label for="fecha">Fecha del alquiler:</label>
+                        <label for="fecha">Fecha del alquiler (obligatorio):</label>
                         <input type="date"
                                id="fecha"
                                name="fecha"
                                min="2026-11-01"
                                max="2026-12-31"
+                               aria-describedby="ayuda-fecha"
                                required>
+                        <small id="ayuda-fecha">
+                            Selecciona una fecha entre el 1 de noviembre
+                            y el 31 de diciembre de 2026.
+                        </small>
                     </p>
 
-                    <p>Tipo de bicicleta:</p>
+                    <fieldset>
+                        <legend>Tipo de bicicleta (obligatorio)</legend>
+
+                        <p>
+                            <input type="radio"
+                                   id="urbana"
+                                   name="tipo_bicicleta"
+                                   value="urbana"
+                                   required>
+                            <label for="urbana">Urbana</label>
+                        </p>
+
+                        <p>
+                            <input type="radio"
+                                   id="montana"
+                                   name="tipo_bicicleta"
+                                   value="montaña">
+                            <label for="montana">Montaña</label>
+                        </p>
+
+                        <p>
+                            <input type="radio"
+                                   id="electrica"
+                                   name="tipo_bicicleta"
+                                   value="eléctrica">
+                            <label for="electrica">Eléctrica</label>
+                        </p>
+                    </fieldset>
 
                     <p>
-                        <input type="radio"
-                               id="urbana"
-                               name="tipo_bicicleta"
-                               value="urbana"
-                               required>
-                        <label for="urbana">Urbana</label>
-                    </p>
-
-                    <p>
-                        <input type="radio"
-                               id="montana"
-                               name="tipo_bicicleta"
-                               value="montaña">
-                        <label for="montana">Montaña</label>
-                    </p>
-
-                    <p>
-                        <input type="radio"
-                               id="electrica"
-                               name="tipo_bicicleta"
-                               value="eléctrica">
-                        <label for="electrica">Eléctrica</label>
-                    </p>
-
-                    <p>
-                        <label for="plan">Plan de alquiler:</label>
+                        <label for="plan">Plan de alquiler (obligatorio):</label>
                         <select id="plan" name="plan" required>
                             <option value="">Selecciona un plan</option>
                             <option value="1 hora">1 hora</option>
@@ -129,7 +154,7 @@
                     </p>
 
                     <p>
-                        <label for="cantidad">Cantidad de bicicletas:</label>
+                        <label for="cantidad">Cantidad de bicicletas (de 1 a 6):</label>
                         <input type="number"
                                id="cantidad"
                                name="cantidad"
@@ -141,10 +166,8 @@
 
                     <p>
                         <label for="recorrido">Recorrido guiado:</label>
-                        <select id="recorrido"
-                                name="recorrido"
-                                required>
-                            <option value="ninguno">Ninguno</option>
+                        <select id="recorrido" name="recorrido" required>
+                            <option value="ninguno">Sin recorrido guiado</option>
                             <option value="rio-parques">Río y Parques</option>
                             <option value="sabores-barrio">Sabores de Barrio</option>
                             <option value="reto-palmas">Reto Las Palmas</option>
@@ -157,7 +180,11 @@
                                   name="comentarios"
                                   rows="4"
                                   cols="40"
-                                  maxlength="300"></textarea>
+                                  maxlength="300"
+                                  aria-describedby="ayuda-comentarios"></textarea>
+                        <small id="ayuda-comentarios">
+                            Máximo 300 caracteres.
+                        </small>
                     </p>
                 </fieldset>
 
@@ -171,17 +198,25 @@
                                value="si"
                                required>
                         <label for="politicas">
-                            Acepto las políticas de alquiler.
+                            Acepto las políticas de alquiler (obligatorio).
                         </label>
                     </p>
                 </fieldset>
 
-                <button type="submit">Enviar reserva</button>
+                <p>
+                    <button type="submit">Enviar solicitud de reserva</button>
+                </p>
             </form>
+
+            <p>
+                <strong>Importante:</strong> este formulario realiza
+                validaciones en el navegador, pero todavía no guarda ni envía
+                reservas a un servidor.
+            </p>
         </section>
 
-        <aside id="horario-atencion">
-            <h2>Horario de atención</h2>
+        <aside id="horario-atencion" aria-labelledby="titulo-horario">
+            <h2 id="titulo-horario">Horario de atención</h2>
 
             <dl>
                 <dt>Lunes a viernes</dt>
@@ -192,31 +227,38 @@
             </dl>
         </aside>
 
-        <section id="servicios">
-            <h2>Consulta nuestros servicios</h2>
+        <section id="servicios" aria-labelledby="titulo-servicios">
+            <h2 id="titulo-servicios">Más información</h2>
 
             <p>
-                Para consultar la disponibilidad de bicicletas y solicitar
-                información, puedes escribirnos a
-                <a href="mailto:ruedalibre@gmail.com">ruedalibre@gmail.com</a>.
+                Para consultar la disponibilidad de bicicletas o resolver
+                dudas sobre el alquiler, escríbenos a
+                <a href="mailto:ruedalibre@gmail.com">
+                    ruedalibre@gmail.com
+                </a>.
             </p>
 
-            <p>
-                <a href="../index.html">Volver al inicio</a>
-            </p>
-
-            <p>
-                <a href="tarifas.html">Consultar tarifas y recorridos</a>
-            </p>
+            <ul>
+                <li><a href="../index.html">Volver a la página de inicio</a></li>
+                <li><a href="tarifas.html">Consultar tarifas y recorridos</a></li>
+            </ul>
         </section>
     </main>
 
     <footer>
         <p>Rueda Libre</p>
+
         <p>
-            Correo:
-            <a href="mailto:ruedalibre@gmail.com">ruedalibre@gmail.com</a>
+            Correo electrónico:
+            <a href="mailto:ruedalibre@gmail.com">
+                ruedalibre@gmail.com
+            </a>
         </p>
+
+        <p>
+            <a href="#contenido-principal">Volver al contenido principal</a>
+        </p>
+
         <p>&copy; 2026 Rueda Libre. Todos los derechos reservados.</p>
     </footer>
 </body>

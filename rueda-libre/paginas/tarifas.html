@@ -1,147 +1,187 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Consulta las tarifas de alquiler de bicicletas y los precios de los recorridos guiados de Rueda Libre.">
+    <meta name="author" content="Andrea Arias">
+    <meta name="description" content="Consulta las tarifas de alquiler de bicicletas y los precios, distancias y niveles de los recorridos guiados de Rueda Libre en Medellín.">
     <title>Tarifas y recorridos | Rueda Libre</title>
+
+    <link rel="stylesheet" href="../css/estilos.css">
 </head>
 
 <body>
     <header>
-        <a href="../index.html">
+        <a href="../index.html" aria-label="Rueda Libre, ir al inicio">
             <img src="../img/bicycle.png"
-                 alt="Logo de Rueda Libre"
+                 alt="Logotipo de Rueda Libre"
                  width="200"
                  height="200">
         </a>
 
         <h1>Tarifas de Rueda Libre</h1>
 
-        <nav>
+        <nav aria-label="Navegación principal">
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="tarifas.html">Tarifas y rutas</a></li>
-                <li><a href="reservas.html">Reservas</a></li>
+                <li><a href="tarifas.html" aria-current="page">Tarifas y recorridos</a></li>
+                <li><a href="reservas.html">Reservar una bicicleta</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section id="tarifas">
-            <h2>Tarifas de alquiler de bicicletas</h2>
+    <main id="contenido-principal">
+        <section id="tarifas" aria-labelledby="titulo-tarifas">
+            <h2 id="titulo-tarifas">Tarifas de alquiler de bicicletas</h2>
 
-            <table border="1">
+            <p>
+                Consulta los precios según el tipo de bicicleta y la duración
+                del alquiler. Los valores están expresados en pesos colombianos.
+            </p>
+
+            <table>
                 <caption>
                     Precios de alquiler según el tipo de bicicleta y el tiempo
                 </caption>
+
                 <thead>
                     <tr>
                         <th scope="col">Tipo de bicicleta</th>
                         <th scope="col">1 hora</th>
-                        <th scope="col">Medio día (4 h)</th>
+                        <th scope="col">Medio día (4 horas)</th>
                         <th scope="col">Día completo</th>
                     </tr>
                 </thead>
+
                 <tbody>
                     <tr>
                         <th scope="row">Urbana</th>
-                        <td>$10.000</td>
-                        <td>$30.000</td>
-                        <td>$50.000</td>
+                        <td>$10.000 COP</td>
+                        <td>$30.000 COP</td>
+                        <td>$50.000 COP</td>
                     </tr>
+
                     <tr>
                         <th scope="row">Montaña</th>
-                        <td>$15.000</td>
-                        <td>$45.000</td>
-                        <td>$70.000</td>
+                        <td>$15.000 COP</td>
+                        <td>$45.000 COP</td>
+                        <td>$70.000 COP</td>
                     </tr>
+
                     <tr>
                         <th scope="row">Eléctrica</th>
-                        <td>$25.000</td>
-                        <td>$70.000</td>
-                        <td>$110.000</td>
+                        <td>$25.000 COP</td>
+                        <td>$70.000 COP</td>
+                        <td>$110.000 COP</td>
                     </tr>
                 </tbody>
             </table>
         </section>
 
-        <section id="recorridos">
-            <h2>Tarifas de recorridos guiados</h2>
+        <section id="recorridos" aria-labelledby="titulo-recorridos">
+            <h2 id="titulo-recorridos">Tarifas de recorridos guiados</h2>
 
-            <table border="1">
+            <p>
+                Compara la distancia, la duración, el nivel de dificultad
+                y el precio de cada recorrido guiado.
+            </p>
+
+            <table>
                 <caption>
                     Precios y características de los recorridos guiados por persona
                 </caption>
+
                 <thead>
                     <tr>
                         <th scope="col">Recorrido</th>
                         <th scope="col">Distancia</th>
                         <th scope="col">Duración</th>
-                        <th scope="col">Nivel</th>
+                        <th scope="col">Nivel de dificultad</th>
                         <th scope="col">Precio por persona</th>
                     </tr>
                 </thead>
+
                 <tbody>
                     <tr>
                         <th scope="row">Río y Parques</th>
                         <td>12 km</td>
-                        <td>2 h</td>
+                        <td>2 horas</td>
                         <td>Fácil</td>
-                        <td>$45.000</td>
+                        <td>$45.000 COP</td>
                     </tr>
+
                     <tr>
                         <th scope="row">Sabores de Barrio</th>
                         <td>18 km</td>
-                        <td>3 h</td>
+                        <td>3 horas</td>
                         <td>Medio</td>
-                        <td>$60.000</td>
+                        <td>$60.000 COP</td>
                     </tr>
+
                     <tr>
                         <th scope="row">Reto Las Palmas</th>
                         <td>25 km</td>
-                        <td>4 h</td>
+                        <td>4 horas</td>
                         <td>Difícil</td>
-                        <td>$85.000</td>
+                        <td>$85.000 COP</td>
                     </tr>
                 </tbody>
             </table>
 
             <p>
-                <a href="reservas.html">Reservar ahora</a>
+                <a href="reservas.html">Ir al formulario para reservar una bicicleta</a>
             </p>
         </section>
 
-        <aside id="informacion-adicional">
-            <h2>Información adicional</h2>
+        <aside id="informacion-adicional" aria-labelledby="titulo-informacion">
+            <h2 id="titulo-informacion">Información adicional</h2>
 
-            <p>Todas las tarifas incluyen casco y candado.</p>
+            <p>Todas las tarifas de alquiler incluyen casco y candado.</p>
 
             <p>
                 Los recorridos guiados salen los sábados y domingos
                 a las 7:00 a. m.
             </p>
 
-            <section id="que-llevar">
-                <h3>¿Qué debes llevar?</h3>
+            <section id="que-llevar" aria-labelledby="titulo-que-llevar">
+                <h3 id="titulo-que-llevar">¿Qué debes llevar?</h3>
 
                 <ul>
                     <li>Ropa cómoda.</li>
-                    <li>Agua.</li>
+                    <li>Agua para mantenerte hidratado.</li>
                     <li>Protector solar.</li>
                     <li>Documento de identidad.</li>
                 </ul>
             </section>
         </aside>
+
+        <section id="contacto" aria-labelledby="titulo-contacto">
+            <h2 id="titulo-contacto">¿Tienes preguntas?</h2>
+
+            <p>
+                Para consultar la disponibilidad de bicicletas o resolver
+                dudas sobre las tarifas, escríbenos a
+                <a href="mailto:ruedalibre@gmail.com">
+                    ruedalibre@gmail.com
+                </a>.
+            </p>
+        </section>
     </main>
 
     <footer>
         <p>Rueda Libre</p>
+
         <p>
-            Correo:
-            <a href="mailto:ruedalibre@gmail.com">ruedalibre@gmail.com</a>
+            Correo electrónico:
+            <a href="mailto:ruedalibre@gmail.com">
+                ruedalibre@gmail.com
+            </a>
         </p>
+
+        <p>
+            <a href="#contenido-principal">Volver al contenido principal</a>
+        </p>
+
         <p>&copy; 2026 Rueda Libre. Todos los derechos reservados.</p>
     </footer>
 </body>
