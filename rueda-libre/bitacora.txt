@@ -215,3 +215,10 @@ Uso: Fondo general del sitio. Admite texto Azul Noche, Gris Asfalto y Verde Ruta
 
 Gris Asfalto: #5B6470
 Uso: Texto secundario sobre fondo crema. Contraste: 5.57:1. Apto para texto normal.
+
+Punto: Estilos CSS de Rueda Libre
+
+Creé el archivo css/styles.css y lo enlacé en las tres páginas usando las rutas correspondientes. También agregué Montserrat y Open Sans desde Google Fonts.
+Definí variables para los colores, las fuentes y los espacios. Apliqué los estilos al cuerpo, los encabezados, las tablas, los formularios y los enlaces, usando las combinaciones de colores aprobadas. También agregué ajustes para pantallas pequeñas.
+En DevTools, en Styles y Computed, comprobé que los párrafos heredan la fuente y el color del body. En cambio, el margen no se hereda automáticamente.
+Revisé los HTML para evitar estilos en línea y etiquetas style. Finalmente, guardé los cambios para realizar el commit y el push.
