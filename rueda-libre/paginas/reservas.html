@@ -41,6 +41,7 @@
                                id="nombre"
                                name="nombre"
                                autocomplete="name"
+                               minlength="3"
                                required>
                     </p>
 
@@ -49,6 +50,9 @@
                         <input type="text"
                                id="documento"
                                name="documento"
+                               inputmode="numeric"
+                               pattern="[0-9]{6,10}"
+                               title="Ingresa entre 6 y 10 dígitos numéricos, sin puntos ni espacios."
                                required>
                     </p>
 
@@ -67,6 +71,9 @@
                                id="celular"
                                name="celular"
                                autocomplete="tel"
+                               inputmode="numeric"
+                               pattern="3[0-9]{9}"
+                               title="Ingresa 10 dígitos y comienza por 3. Ejemplo: 3001234567."
                                required>
                     </p>
                 </fieldset>
@@ -79,6 +86,8 @@
                         <input type="date"
                                id="fecha"
                                name="fecha"
+                               min="2026-11-01"
+                               max="2026-12-31"
                                required>
                     </p>
 
@@ -125,6 +134,7 @@
                                id="cantidad"
                                name="cantidad"
                                min="1"
+                               max="6"
                                step="1"
                                required>
                     </p>
@@ -142,11 +152,12 @@
                     </p>
 
                     <p>
-                        <label for="comentarios">Comentarios:</label>
+                        <label for="comentarios">Comentarios (opcional):</label>
                         <textarea id="comentarios"
                                   name="comentarios"
                                   rows="4"
-                                  cols="40"></textarea>
+                                  cols="40"
+                                  maxlength="300"></textarea>
                     </p>
                 </fieldset>
 

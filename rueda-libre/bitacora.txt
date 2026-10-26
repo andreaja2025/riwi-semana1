@@ -117,3 +117,65 @@ Justificación de los controles elegidos:
 2. Tipo de bicicleta (`type="radio"`): permite seleccionar una sola opción entre urbana, montaña y eléctrica.
 
 3. Cantidad de bicicletas (`type="number"`): permite ingresar una cantidad numérica y establecer un mínimo de una bicicleta mediante min="1"
+
+PRUEBAS DE VALIDACIÓN DEL FORMULARIO
+
+Campo: Nombre completo
+Dato de prueba: Ana
+Resultado esperado: Aceptado
+Resultado obtenido: __________
+
+Campo: Nombre completo
+Dato de prueba: Al
+Resultado esperado: Rechazado por tener menos de 3 caracteres
+Resultado obtenido: __________
+
+Campo: Documento
+Dato de prueba: 123456
+Resultado esperado: Aceptado
+Resultado obtenido: __________
+
+Campo: Documento
+Dato de prueba: ABC123
+Resultado esperado: Rechazado por contener letras
+Resultado obtenido: __________
+
+Campo: Celular
+Dato de prueba: 3001234567
+Resultado esperado: Aceptado
+Resultado obtenido: __________
+
+Campo: Celular
+Dato de prueba: 1234567890
+Resultado esperado: Rechazado por no comenzar por 3
+Resultado obtenido: __________
+
+Campo: Celular
+Dato de prueba: 300123
+Resultado esperado: Rechazado por tener menos de 10 dígitos
+Resultado obtenido: __________
+
+Campo: Fecha del alquiler
+Dato de prueba: 2026-10-31
+Resultado esperado: Rechazado por estar fuera del rango permitido
+Resultado obtenido: __________
+
+Campo: Fecha del alquiler
+Dato de prueba: 2026-11-15
+Resultado esperado: Aceptado
+Resultado obtenido: __________
+
+Campo: Cantidad de bicicletas
+Dato de prueba: 7
+Resultado esperado: Rechazado por superar el máximo de 6
+Resultado obtenido: __________
+
+Campo: Comentarios
+Dato de prueba: Más de 300 caracteres
+Resultado esperado: No permite superar los 300 caracteres
+Resultado obtenido: __________
+
+Campo: Políticas de alquiler
+Dato de prueba: Casilla sin marcar
+Resultado esperado: Rechazado por no aceptar las políticas
+Resultado obtenido: __________
