@@ -1,3 +1,4 @@
+
 :root {
     --verde: #1E7A4F;
     --naranja: #F39A2B;
@@ -16,7 +17,7 @@
     --ancho-contenido: 75rem;
 }
 
-/* Modelo de caja: el ancho incluye contenido, padding y borde */
+/* Modelo de caja */
 
 *,
 *::before,
@@ -133,13 +134,8 @@ main {
     padding: var(--espacio-grande);
 }
 
-/* Separación consistente de secciones y bloques laterales */
-
 section,
-aside {
-    margin-bottom: var(--espacio-grande);
-}
-
+aside,
 .seccion {
     margin-bottom: var(--espacio-grande);
 }
@@ -148,7 +144,7 @@ aside {
     min-height: 70vh;
 }
 
-/* Enlaces generales */
+/* Enlaces */
 
 a {
     text-underline-offset: 0.2em;
@@ -163,7 +159,7 @@ main a:hover {
     color: var(--azul);
 }
 
-/* Enlaces de llamada a la acción */
+/* Botones de llamada a la acción */
 
 .enlace-boton {
     display: inline-block;
@@ -198,7 +194,7 @@ img {
     border-radius: 8px;
 }
 
-/* Tarjetas de servicios en la página de inicio */
+/* Tarjetas de servicios */
 
 .tarjeta-servicio,
 #servicios article {
@@ -219,6 +215,50 @@ img {
     margin-top: var(--espacio-normal);
     margin-bottom: var(--espacio-normal);
     border-radius: 6px;
+}
+
+/* Etiqueta Nuevo en la tarjeta de bicicletas eléctricas */
+
+.tarjeta-electrica {
+    position: relative;
+}
+
+.etiqueta-nuevo {
+    position: absolute;
+    top: var(--espacio-normal);
+    right: var(--espacio-normal);
+    z-index: 1;
+    padding: 0.25rem 0.75rem;
+    color: var(--blanco);
+    background-color: var(--naranja);
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+/* Enlace flotante de WhatsApp */
+
+.whatsapp-flotante {
+    position: fixed;
+    right: var(--espacio-normal);
+    bottom: var(--espacio-normal);
+    z-index: 1000;
+    display: inline-block;
+    padding: 0.75rem 1rem;
+    color: var(--blanco);
+    background-color: var(--verde);
+    border: 2px solid var(--verde);
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 20%);
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.whatsapp-flotante:hover {
+    color: var(--azul);
+    background-color: var(--naranja);
+    border-color: var(--naranja);
 }
 
 /* Tablas de tarifas y recorridos */
@@ -310,7 +350,7 @@ input[type="radio"] {
     accent-color: var(--verde);
 }
 
-/* Los controles de selección y sus etiquetas permanecen alineados */
+/* Alineación de opciones de selección */
 
 form fieldset fieldset p {
     display: flex;
@@ -390,6 +430,7 @@ dd {
 
 footer {
     padding: var(--espacio-grande);
+    padding-bottom: 5rem;
     color: var(--crema);
     background-color: var(--azul);
     border-top: 5px solid var(--verde);
@@ -414,6 +455,7 @@ footer a:focus-visible {
     outline-offset: 3px;
 }
 
+/* Diseño adaptable a pantallas pequeñas */
 
 @media (max-width: 600px) {
     header {
@@ -444,6 +486,17 @@ footer a:focus-visible {
         padding: var(--espacio-normal);
     }
 
+    .etiqueta-nuevo {
+        top: var(--espacio-pequeno);
+        right: var(--espacio-pequeno);
+    }
+
+    .whatsapp-flotante {
+        right: var(--espacio-pequeno);
+        bottom: var(--espacio-pequeno);
+        padding: 0.625rem 0.875rem;
+    }
+
     table {
         display: block;
         width: 100%;
@@ -470,6 +523,7 @@ footer a:focus-visible {
     }
 }
 
+/* Respeto por la preferencia de movimiento reducido */
 
 @media (prefers-reduced-motion: reduce) {
     html {
