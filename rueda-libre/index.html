@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta name="author" content="Andrea Arias">
     <meta name="description" content="Rueda Libre ofrece alquiler de bicicletas, recorridos guiados y asistencia para ciclistas en Medellín.">
     <meta name="keywords" content="bicicletas, alquiler, Medellín, rutas guiadas, mantenimiento">
@@ -19,25 +20,43 @@
 <body>
     <header>
         <a href="index.html" aria-label="Rueda Libre, ir al inicio">
-            <img src="img/bicycle.png"
-                 alt="Logotipo de Rueda Libre"
-                 width="200"
-                 height="200">
+            <img
+                src="img/bicycle.png"
+                alt="Logotipo de Rueda Libre"
+                width="200"
+                height="200"
+            >
         </a>
 
         <h1>Rueda Libre</h1>
 
         <nav aria-label="Navegación principal">
             <ul id="menu">
-                <li><a href="index.html" class="activo" aria-current="page">Inicio</a></li>
-                <li><a href="paginas/tarifas.html">Consultar tarifas y recorridos</a></li>
-                <li><a href="paginas/reservas.html">Reservar una bicicleta</a></li>
+                <li>
+                    <a href="index.html" class="activo" aria-current="page">
+                        Inicio
+                    </a>
+                </li>
+                <li>
+                    <a href="paginas/tarifas.html">
+                        Consultar tarifas y recorridos
+                    </a>
+                </li>
+                <li>
+                    <a href="paginas/reservas.html">
+                        Reservar una bicicleta
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
 
     <main id="contenido-principal">
-        <section id="inicio" aria-labelledby="titulo-inicio">
+        <section
+            id="inicio"
+            class="seccion"
+            aria-labelledby="titulo-inicio"
+        >
             <h2 id="titulo-inicio">¡Hola, somos Rueda Libre!</h2>
 
             <p>
@@ -48,15 +67,23 @@
             </p>
 
             <p>
-                <a href="#contacto">Consultar información de contacto</a>
+                <a href="#contacto">
+                    Consultar información de contacto
+                </a>
             </p>
 
             <p>
-                <a href="paginas/reservas.html" class="enlace-boton">Reservar ahora</a>
+                <a href="paginas/reservas.html" class="enlace-boton">
+                    Reservar ahora
+                </a>
             </p>
         </section>
 
-        <section id="presentacion" aria-labelledby="titulo-presentacion">
+        <section
+            id="presentacion"
+            class="seccion"
+            aria-labelledby="titulo-presentacion"
+        >
             <h2 id="titulo-presentacion">¿Quiénes somos?</h2>
 
             <p>
@@ -69,10 +96,14 @@
             </p>
         </section>
 
-        <section id="servicios" aria-labelledby="titulo-servicios">
+        <section
+            id="servicios"
+            class="seccion"
+            aria-labelledby="titulo-servicios"
+        >
             <h2 id="titulo-servicios">Nuestros servicios</h2>
 
-            <article id="alquiler-bicicletas">
+            <article id="alquiler-bicicletas" class="tarjeta-servicio">
                 <h3>Alquiler de bicicletas</h3>
 
                 <p>
@@ -83,26 +114,34 @@
                     <strong>Ofrecemos facilidades de pago.</strong>
                 </p>
 
-                <img src="img/byke.png"
-                     alt="Bicicleta que se ofrece para alquiler"
-                     width="400"
-                     height="400">
+                <img
+                    src="img/byke.png"
+                    alt="Bicicleta que se ofrece para alquiler"
+                    width="400"
+                    height="400"
+                    loading="lazy"
+                >
             </article>
 
-            <article id="rutas-guiadas">
+            <article id="rutas-guiadas" class="tarjeta-servicio">
                 <h3>Rutas guiadas</h3>
 
-                <img src="img/sendero.png"
-                     alt="Sendero natural rodeado de vegetación para recorrer en bicicleta"
-                     width="400"
-                     height="200">
+                <img
+                    src="img/sendero.png"
+                    alt="Sendero natural rodeado de vegetación para recorrer en bicicleta"
+                    width="400"
+                    height="200"
+                    loading="lazy"
+                >
 
                 <h4>Sendero Mirador La Paloma</h4>
 
                 <p>
-                    <a href="https://www.google.com/maps/dir/Mirador+La+Paloma,+Medell%C3%ADn,+Santa+Elena,+Medell%C3%ADn,+Antioquia/Medell%C3%ADn,+Antioquia/@6.200539,-75.5916835,12z/data=!3m1!4b1!4m13!1m5!1m1!1s0x8e4428069322b7ad:0x581e195430a4e0e2!2m2!1d-75.532123!2d6.213039!1m5!1m1!1s0x8e4428dfb80fad05:0x42137cfcc7b53b56!2m2!1d-75.5658153!2d6.2476376?entry=ttu&amp;g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D"
-                       target="_blank"
-                       rel="noopener noreferrer">
+                    <a
+                        href="https://www.google.com/maps/dir/Mirador+La+Paloma,+Medell%C3%ADn,+Santa+Elena,+Medell%C3%ADn,+Antioquia/Medell%C3%ADn,+Antioquia/@6.200539,-75.5916835,12z/data=!3m1!4b1!4m13!1m5!1m1!1s0x8e4428069322b7ad:0x581e195430a4e0e2!2m2!1d-75.532123!2d6.213039!1m5!1m1!1s0x8e4428dfb80fad05:0x42137cfcc7b53b56!2m2!1d-75.5658153!2d6.2476376?entry=ttu&amp;g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         Consultar la ubicación del Mirador La Paloma en Google Maps
                     </a>
                 </p>
@@ -124,7 +163,7 @@
                 </p>
             </article>
 
-            <article id="seguro-asistencia">
+            <article id="seguro-asistencia" class="tarjeta-servicio">
                 <h3>Seguro y servicio de ayuda</h3>
 
                 <p>
@@ -137,7 +176,11 @@
             </article>
         </section>
 
-        <section id="como-alquilar" aria-labelledby="titulo-como-alquilar">
+        <section
+            id="como-alquilar"
+            class="seccion"
+            aria-labelledby="titulo-como-alquilar"
+        >
             <h2 id="titulo-como-alquilar">¿Cómo alquilar?</h2>
 
             <p>Para alquilar una bicicleta, sigue estos pasos:</p>
@@ -149,7 +192,9 @@
                         tarifas y los tipos de recorridos disponibles
                     </a>.
                 </li>
-                <li>Selecciona la fecha de alquiler y el tipo de bicicleta.</li>
+                <li>
+                    Selecciona la fecha de alquiler y el tipo de bicicleta.
+                </li>
                 <li>
                     <a href="paginas/reservas.html">
                         Completa el formulario con tus datos de reserva
@@ -162,7 +207,11 @@
             </ol>
         </section>
 
-        <section id="beneficios" aria-labelledby="titulo-beneficios">
+        <section
+            id="beneficios"
+            class="seccion"
+            aria-labelledby="titulo-beneficios"
+        >
             <h2 id="titulo-beneficios">Beneficios</h2>
 
             <ul>
@@ -172,7 +221,11 @@
             </ul>
         </section>
 
-        <section id="contacto" aria-labelledby="titulo-contacto">
+        <section
+            id="contacto"
+            class="seccion"
+            aria-labelledby="titulo-contacto"
+        >
             <h2 id="titulo-contacto">Contacto</h2>
 
             <p>
@@ -202,7 +255,9 @@
         </p>
 
         <p>
-            <a href="#contenido-principal">Volver al contenido principal</a>
+            <a href="#contenido-principal">
+                Volver al contenido principal
+            </a>
         </p>
 
         <p>&copy; 2026 Rueda Libre. Todos los derechos reservados.</p>

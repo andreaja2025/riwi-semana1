@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta name="author" content="Andrea Arias">
     <meta name="description" content="Consulta las tarifas de alquiler de bicicletas y los precios, distancias y niveles de los recorridos guiados de Rueda Libre en Medellín.">
 
@@ -10,7 +11,11 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet"
+    >
 
     <link rel="stylesheet" href="../css/styles.css">
 </head>
@@ -18,26 +23,51 @@
 <body>
     <header>
         <a href="../index.html" aria-label="Rueda Libre, ir al inicio">
-            <img src="../img/bicycle.png"
-                 alt="Logotipo de Rueda Libre"
-                 width="200"
-                 height="200">
+            <img
+                src="../img/bicycle.png"
+                alt="Logotipo de Rueda Libre"
+                width="200"
+                height="200"
+            >
         </a>
 
         <h1>Tarifas de Rueda Libre</h1>
 
         <nav aria-label="Navegación principal">
             <ul id="menu">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="tarifas.html" class="activo" aria-current="page">Tarifas y recorridos</a></li>
-                <li><a href="reservas.html">Reservar una bicicleta</a></li>
+                <li>
+                    <a href="../index.html">Inicio</a>
+                </li>
+
+                <li>
+                    <a
+                        href="tarifas.html"
+                        class="activo"
+                        aria-current="page"
+                    >
+                        Tarifas y recorridos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="reservas.html">
+                        Reservar una bicicleta
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
 
     <main id="contenido-principal">
-        <section id="tarifas" aria-labelledby="titulo-tarifas">
-            <h2 id="titulo-tarifas">Tarifas de alquiler de bicicletas</h2>
+
+        <section
+            id="tarifas"
+            class="seccion"
+            aria-labelledby="titulo-tarifas"
+        >
+            <h2 id="titulo-tarifas">
+                Tarifas de alquiler de bicicletas
+            </h2>
 
             <p>
                 Consulta los precios según el tipo de bicicleta y la duración
@@ -83,8 +113,14 @@
             </table>
         </section>
 
-        <section id="recorridos" aria-labelledby="titulo-recorridos">
-            <h2 id="titulo-recorridos">Tarifas de recorridos guiados</h2>
+        <section
+            id="recorridos"
+            class="seccion"
+            aria-labelledby="titulo-recorridos"
+        >
+            <h2 id="titulo-recorridos">
+                Tarifas de recorridos guiados
+            </h2>
 
             <p>
                 Compara la distancia, la duración, el nivel de dificultad
@@ -140,17 +176,28 @@
             </p>
         </section>
 
-        <aside id="informacion-adicional" aria-labelledby="titulo-informacion">
-            <h2 id="titulo-informacion">Información adicional</h2>
+        <aside
+            id="informacion-adicional"
+            class="seccion"
+            aria-labelledby="titulo-informacion"
+        >
+            <h2 id="titulo-informacion">
+                Información adicional
+            </h2>
 
-            <p>Todas las tarifas de alquiler incluyen casco y candado.</p>
+            <p>
+                Todas las tarifas de alquiler incluyen casco y candado.
+            </p>
 
             <p>
                 Los recorridos guiados salen los sábados y domingos
                 a las 7:00 a. m.
             </p>
 
-            <section id="que-llevar" aria-labelledby="titulo-que-llevar">
+            <section
+                id="que-llevar"
+                aria-labelledby="titulo-que-llevar"
+            >
                 <h3 id="titulo-que-llevar">¿Qué debes llevar?</h3>
 
                 <ul>
@@ -162,7 +209,11 @@
             </section>
         </aside>
 
-        <section id="contacto" aria-labelledby="titulo-contacto">
+        <section
+            id="contacto"
+            class="seccion"
+            aria-labelledby="titulo-contacto"
+        >
             <h2 id="titulo-contacto">¿Tienes preguntas?</h2>
 
             <p>
@@ -173,6 +224,7 @@
                 </a>.
             </p>
         </section>
+
     </main>
 
     <footer>
@@ -186,7 +238,9 @@
         </p>
 
         <p>
-            <a href="#contenido-principal">Volver al contenido principal</a>
+            <a href="#contenido-principal">
+                Volver al contenido principal
+            </a>
         </p>
 
         <p>&copy; 2026 Rueda Libre. Todos los derechos reservados.</p>

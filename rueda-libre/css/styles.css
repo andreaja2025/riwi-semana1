@@ -12,9 +12,23 @@
     --espacio-pequeno: 0.5rem;
     --espacio-normal: 1rem;
     --espacio-grande: 2rem;
+
+    --ancho-contenido: 75rem;
+}
+
+/* Modelo de caja: el ancho incluye contenido, padding y borde */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 /* Estilos generales */
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
@@ -25,93 +39,113 @@ body {
     line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--titulos);
     font-weight: 700;
     color: var(--azul);
     line-height: 1.25;
 }
 
+h1 {
+    overflow-wrap: anywhere;
+}
+
 h2 {
-    border-left: 5px solid var(--naranja);
     padding-left: var(--espacio-pequeno);
+    border-left: 5px solid var(--naranja);
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: var(--espacio-normal);
+}
+
+strong,
+label,
+th,
+legend {
+    font-weight: 600;
 }
 
 /* Encabezado y navegación */
 
 header {
-    background-color: var(--crema);
-    color: var(--azul);
     padding: var(--espacio-normal) var(--espacio-grande);
+    color: var(--azul);
+    background-color: var(--crema);
     border-bottom: 4px solid var(--verde);
 }
 
+header > a img {
+    width: 12.5rem;
+    max-width: 100%;
+    height: auto;
+}
+
 header h1 {
-    color: var(--azul);
     margin-top: var(--espacio-pequeno);
 }
 
-nav ul {
+nav ul,
+#menu {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     gap: var(--espacio-normal);
-    list-style: none;
     padding: 0;
-    margin-bottom: var(--espacio-pequeno);
+    margin: var(--espacio-normal) 0;
+    list-style: none;
 }
-
-/* Selector descendiente para los enlaces del menú */
 
 #menu a {
     display: inline-block;
+    padding: var(--espacio-pequeno);
     color: var(--azul);
     font-weight: 600;
     text-decoration: none;
-    padding: var(--espacio-pequeno);
     border-radius: 4px;
     transition: background-color 0.2s, color 0.2s;
 }
 
-/* Enlace de la página actual: resuelve el conflicto de especificidad */
-
 #menu a.activo {
     color: var(--blanco);
     background-color: var(--verde);
-    font-weight: 600;
 }
-
-/* Estados de interacción del menú */
 
 #menu a:hover {
     color: var(--azul);
     background-color: var(--naranja);
 }
 
-#menu a:focus {
-    outline: 3px solid var(--azul);
-    outline-offset: 3px;
-}
-
 /* Contenido principal */
 
 main {
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: var(--ancho-contenido);
+    margin-right: auto;
+    margin-left: auto;
     padding: var(--espacio-grande);
 }
 
-section, aside {
+/* Separación consistente de secciones y bloques laterales */
+
+section,
+aside {
     margin-bottom: var(--espacio-grande);
 }
 
-section {
-    padding: var(--espacio-normal);
-    border-radius: 8px;
+.seccion {
+    margin-bottom: var(--espacio-grande);
 }
 
-strong, label, th, legend {
-    font-weight: 600;
+#inicio {
+    min-height: 70vh;
 }
 
 /* Enlaces generales */
@@ -129,16 +163,11 @@ main a:hover {
     color: var(--azul);
 }
 
-main a:focus {
-    outline: 3px solid var(--azul);
-    outline-offset: 3px;
-}
-
-/* Enlaces de llamada a la acción con apariencia de botón */
+/* Enlaces de llamada a la acción */
 
 .enlace-boton {
     display: inline-block;
-    padding: var(--espacio-pequeno) var(--espacio-normal);
+    padding: var(--espacio-normal) var(--espacio-grande);
     color: var(--blanco);
     background-color: var(--verde);
     border: 2px solid var(--verde);
@@ -152,57 +181,73 @@ main a.enlace-boton {
     color: var(--blanco);
 }
 
-.enlace-boton:hover {
+.enlace-boton:hover,
+main a.enlace-boton:hover {
     color: var(--azul);
     background-color: var(--naranja);
     border-color: var(--naranja);
-}
-
-main a.enlace-boton:hover {
-    color: var(--azul);
-}
-
-.enlace-boton:focus {
-    outline: 3px solid var(--azul);
-    outline-offset: 3px;
 }
 
 /* Imágenes */
 
 img {
     display: block;
+    width: auto;
     max-width: 100%;
     height: auto;
     border-radius: 8px;
 }
 
-/* Tablas */
+/* Tarjetas de servicios en la página de inicio */
+
+.tarjeta-servicio,
+#servicios article {
+    width: 100%;
+    padding: var(--espacio-grande);
+    margin-bottom: var(--espacio-grande);
+    border: 1px solid var(--gris);
+    border-radius: 8px;
+    background-color: var(--blanco);
+}
+
+.tarjeta-servicio img,
+#servicios article img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-top: var(--espacio-normal);
+    margin-bottom: var(--espacio-normal);
+    border-radius: 6px;
+}
+
+/* Tablas de tarifas y recorridos */
 
 table {
     width: 100%;
+    margin: var(--espacio-grande) 0;
     border-collapse: collapse;
     background-color: var(--blanco);
-    margin: var(--espacio-normal) 0;
-    border-radius: 6px;
-    overflow: hidden;
 }
 
 caption {
-    text-align: left;
-    font-weight: 600;
-    margin-bottom: var(--espacio-pequeno);
+    padding: var(--espacio-normal);
     color: var(--azul);
+    font-weight: 600;
+    text-align: left;
 }
 
-th, td {
+th,
+td {
+    padding: var(--espacio-normal);
     border: 1px solid var(--gris);
-    padding: var(--espacio-pequeno);
     text-align: left;
+    vertical-align: top;
 }
 
 thead th {
-    background-color: var(--verde);
     color: var(--blanco);
+    background-color: var(--verde);
 }
 
 tbody tr:nth-child(even) {
@@ -211,55 +256,98 @@ tbody tr:nth-child(even) {
 
 /* Formularios */
 
+form {
+    width: 100%;
+}
+
 fieldset {
+    min-width: 0;
+    padding: var(--espacio-grande);
+    margin: 0 0 var(--espacio-grande);
     border: 1px solid var(--gris);
     border-left: 4px solid var(--verde);
     border-radius: 6px;
-    padding: var(--espacio-normal);
-    margin-bottom: var(--espacio-grande);
 }
 
 legend {
-    color: var(--azul);
     padding: 0 var(--espacio-pequeno);
+    color: var(--azul);
 }
 
-input, select, textarea {
+form p {
+    margin-bottom: var(--espacio-grande);
+}
+
+form label {
+    display: block;
+    margin-bottom: var(--espacio-pequeno);
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: var(--espacio-normal);
+    margin-bottom: var(--espacio-pequeno);
     font: inherit;
     color: var(--azul);
     background-color: var(--blanco);
     border: 1px solid var(--gris);
     border-radius: 4px;
-    padding: var(--espacio-pequeno);
-    max-width: 100%;
-    margin-bottom: var(--espacio-pequeno);
 }
 
-/* Foco visible en los campos del formulario */
-
-input:focus,
-select:focus,
-textarea:focus {
-    border-color: var(--azul);
-    outline: 3px solid var(--azul);
-    outline-offset: 2px;
+textarea {
+    min-height: 8rem;
+    resize: vertical;
 }
 
 input[type="checkbox"],
 input[type="radio"] {
+    width: auto;
+    margin-right: var(--espacio-pequeno);
     accent-color: var(--verde);
 }
 
-/* Botones */
+/* Los controles de selección y sus etiquetas permanecen alineados */
+
+form fieldset fieldset p {
+    display: flex;
+    align-items: center;
+    gap: var(--espacio-pequeno);
+    margin-bottom: var(--espacio-pequeno);
+}
+
+form fieldset fieldset input[type="radio"],
+form fieldset fieldset input[type="checkbox"] {
+    flex-shrink: 0;
+}
+
+form fieldset fieldset label {
+    display: inline;
+    margin-bottom: 0;
+}
+
+small {
+    display: block;
+    margin-bottom: var(--espacio-normal);
+    color: var(--gris);
+    font-size: 0.875rem;
+}
+
+/* Botones del formulario */
 
 button {
+    display: inline-block;
+    max-width: 100%;
+    padding: var(--espacio-normal) var(--espacio-grande);
     font: inherit;
     font-weight: 600;
     color: var(--blanco);
     background-color: var(--verde);
     border: 2px solid var(--verde);
     border-radius: 6px;
-    padding: var(--espacio-pequeno) var(--espacio-normal);
     cursor: pointer;
     transition: background-color 0.2s, color 0.2s;
 }
@@ -270,12 +358,7 @@ button:hover {
     border-color: var(--naranja);
 }
 
-button:focus {
-    outline: 3px solid var(--azul);
-    outline-offset: 3px;
-}
-
-/* Indicador de foco para otros elementos interactivos */
+/* Foco visible y accesibilidad */
 
 a:focus-visible,
 button:focus-visible,
@@ -286,12 +369,29 @@ textarea:focus-visible {
     outline-offset: 3px;
 }
 
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--azul);
+}
+
+/* Información adicional y horarios */
+
+dt {
+    margin-top: var(--espacio-normal);
+    font-weight: 600;
+}
+
+dd {
+    margin-left: var(--espacio-normal);
+}
+
 /* Pie de página */
 
 footer {
-    background-color: var(--azul);
-    color: var(--crema);
     padding: var(--espacio-grande);
+    color: var(--crema);
+    background-color: var(--azul);
     border-top: 5px solid var(--verde);
 }
 
@@ -309,12 +409,11 @@ footer a:hover {
     color: var(--naranja);
 }
 
-footer a:focus {
+footer a:focus-visible {
     outline: 3px solid var(--crema);
     outline-offset: 3px;
 }
 
-/* Diseño adaptable a pantallas pequeñas */
 
 @media (max-width: 600px) {
     header {
@@ -325,26 +424,61 @@ footer a:focus {
         padding: var(--espacio-normal);
     }
 
-    nav ul {
-        flex-direction: column;
-        align-items: flex-start;
+    nav ul,
+    #menu {
+        flex-direction: row;
+        flex-wrap: wrap;
         gap: var(--espacio-pequeno);
     }
 
-    section {
-        padding: var(--espacio-pequeno);
+    #menu a {
+        overflow-wrap: anywhere;
+    }
+
+    #inicio {
+        min-height: 70vh;
+    }
+
+    .tarjeta-servicio,
+    #servicios article {
+        padding: var(--espacio-normal);
     }
 
     table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
         font-size: 0.875rem;
     }
 
-    th, td {
-        padding: 0.35rem;
+    caption {
+        white-space: normal;
     }
 
-    input, select, textarea {
-        box-sizing: border-box;
-        width: 100%;
+    th,
+    td {
+        padding: var(--espacio-pequeno);
+    }
+
+    fieldset {
+        padding: var(--espacio-normal);
+    }
+
+    button {
+        max-width: 100%;
+        white-space: normal;
+    }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
     }
 }

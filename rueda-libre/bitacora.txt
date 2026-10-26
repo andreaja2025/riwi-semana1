@@ -228,3 +228,24 @@ Punto: Navegación, pseudoclases y especificidad
 Agregué el id menu y la clase activo para identificar la página actual en cada menú. También definí los estados hover y focus para enlaces, botones y campos del formulario, y creé la clase enlace-boton para destacar las llamadas a la acción.
 En DevTools revisé el conflicto entre #menu a y .activo. El primero tiene especificidad (1, 0, 1) y el segundo (0, 1, 0), por lo que el selector con ID prevalece al definir el color. Ajusté las reglas sin utilizar !important.
 Comprobé los estados con :hov y recorrí las páginas con Tab para revisar la visibilidad del foco.
+
+Punto: Box model, espaciado y unidades relativas
+
+Apliqué box-sizing: border-box a todos los elementos y sus pseudoelementos para que el ancho incluya el contenido, el padding y el borde.
+Limité el ancho del contenido principal a 75rem y lo centré con márgenes automáticos. Definí una altura mínima de 70vh para la portada.
+Organicé los servicios en tarjetas con relleno, borde, esquinas redondeadas y separación. Las imágenes ocupan el 100% del ancho disponible de cada tarjeta.
+Mejoré las tablas con relleno en las celdas y encabezados verdes con texto blanco. Organicé el formulario con etiquetas encima de los campos, campos de ancho completo y mayor separación entre grupos.
+
+Mediciones en DevTools (Computed):
+- Tarjeta con content-box: ____ px
+- Tarjeta con border-box: ____ px
+- Ancho de contenido usado: ____ px
+- Padding horizontal total: ____ px
+- Bordes horizontales totales: ____ px
+
+La diferencia observada fue: ____ px.
+
+Pruebas realizadas:
+- Verifiqué box-sizing en Computed.
+- Revisé que las imágenes no se salieran de las tarjetas.
+- Comprobé el menú en una fila y el formulario en una pantalla pequeña.
