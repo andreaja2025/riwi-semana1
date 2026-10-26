@@ -13,3 +13,99 @@ Y al inspeccionar en network aparece status 404 que significa que el servidor no
 HTML: Son las piezas que conforman a un carro.
 CSS : Es el color del carro, los stikers, todo lo visual.
 JavaScript: Son los circuitos eléctricos y mecánicos que hacen que el carro funcione.
+
+Paso 1. Esquema de regiones de las páginas — v0.2
+
+1. Página de inicio (`index.html`)
+
+index.html
+│
+├── HEADER (encabezado)
+│   ├── Logo y nombre del negocio: Rueda Libre
+│   └── NAV (navegación principal)
+│       ├── Inicio
+│       ├── Tarifas y rutas
+│       └── Reservas
+│
+├── MAIN (contenido principal)
+│   │
+│   ├── SECTION: Presentación del negocio
+│   │   └── Descripción y enlace "Reservar ahora"
+│   │
+│   ├── SECTION: Quiénes somos
+│   │   └── Información del negocio
+│   │
+│   ├── SECTION: Servicios
+│   │   ├── ARTICLE: Alquiler de bicicletas
+│   │   ├── ARTICLE: Recorridos guiados
+│   │   └── ARTICLE: Seguro de responsabilidad civil
+│   │
+│   ├── SECTION: Cómo alquilar
+│   │   └── Lista de pasos para alquilar
+│   │
+│   ├── SECTION: Beneficios
+│   │   └── Lista de beneficios
+│   │
+│   └── SECTION: Contacto
+│       └── Correo electrónico
+│
+└── FOOTER (pie de página)
+    ├── Nombre del negocio
+    ├── Correo electrónico
+    └── Derechos reservados
+
+
+2. Página de tarifas (`paginas/tarifas.html`)
+paginas/tarifas.html
+│
+├── HEADER (encabezado)
+│   ├── Logo y nombre del negocio: Rueda Libre
+│   └── NAV (navegación principal)
+│       ├── Inicio
+│       ├── Tarifas y rutas
+│       └── Reservas
+│
+├── MAIN (contenido principal)
+│   │
+│   ├── SECTION: Tarifas de alquiler
+│   │   └── Tabla de tarifas de las bicicletas
+│   │
+│   ├── SECTION: Recorridos guiados
+│   │   ├── Tabla de recorridos
+│   │   └── Enlace "Reservar ahora"
+│   │
+│   └── ASIDE (contenido complementario)
+│       └── Información sobre qué llevar
+│           y condiciones de los recorridos
+│
+└── FOOTER (pie de página)
+    ├── Nombre del negocio
+    ├── Correo electrónico
+    └── Derechos reservados
+
+3. Página de reservas (`paginas/reservas.html`)
+paginas/reservas.html
+│
+├── HEADER (encabezado)
+│   ├── Logo y nombre del negocio: Rueda Libre
+│   └── NAV (navegación principal)
+│       ├── Inicio
+│       ├── Tarifas y rutas
+│       └── Reservas
+│
+├── MAIN (contenido principal)
+│   │
+│   ├── SECTION: Información de reservas
+│   │   └── Indicaciones para reservar y correo de contacto
+│   │
+│   ├── ASIDE (contenido complementario)
+│   │   └── Horarios de atención
+│   │
+│   └── SECTION: Enlaces útiles
+│       ├── Volver al inicio
+│       └── Consultar tarifas y recorridos
+│
+└── FOOTER (pie de página)
+    ├── Nombre del negocio
+    ├── Correo electrónico
+    └── Derechos reservados

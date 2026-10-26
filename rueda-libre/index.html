@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -22,7 +21,7 @@
                  height="200">
         </a>
 
-        <nav>
+        <nav aria-label="Navegación principal">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="paginas/tarifas.html">Tarifas y rutas</a></li>
@@ -64,65 +63,63 @@
         <section id="servicios">
             <h2>Nuestros servicios</h2>
 
-            <ul>
-                <li>Alquiler de bicicletas</li>
-            </ul>
+            <article id="alquiler-bicicletas">
+                <h3>Alquiler de bicicletas</h3>
 
-            <p><strong>A tener en cuenta:</strong></p>
+                <p>
+                    Para alquilar es necesario hacer la
+                    <strong>reserva con 12 horas de anticipación</strong>.
+                    De lo contrario, no garantizamos la disponibilidad de la
+                    bicicleta y de sus implementos básicos.
+                    <strong>Manejamos facilidades de pago.</strong>
+                </p>
 
-            <p>
-                Para alquilar es necesario hacer la
-                <strong>reserva con 12 horas de anticipación</strong>.
-                De lo contrario, no garantizamos la disponibilidad de la
-                bicicleta y de sus implementos básicos.
-                <strong>Manejamos facilidades de pago.</strong>
-            </p>
+                <img src="img/byke.png"
+                     alt="Bicicleta disponible para alquiler"
+                     width="400"
+                     height="400">
+            </article>
 
-            <img src="img/byke.png"
-                 alt="Bicicleta disponible para alquiler"
-                 width="400"
-                 height="400">
+            <article id="rutas-guiadas">
+                <h3>Rutas guiadas</h3>
 
-            <ul>
-                <li>Rutas guiadas</li>
-            </ul>
+                <img src="img/sendero.png"
+                     alt="Sendero natural para recorrer en bicicleta"
+                     width="400"
+                     height="200">
 
-            <img src="img/sendero.png"
-                 alt="Sendero natural para recorrer en bicicleta"
-                 width="400"
-                 height="200">
+                <h4>Sendero Mirador La Paloma</h4>
 
-            <h3>Sendero Mirador La Paloma</h3>
+                <p>
+                    <a href="https://www.google.com/maps/dir/Mirador+La+Paloma,+Medell%C3%ADn,+Santa+Elena,+Medell%C3%ADn,+Antioquia/Medell%C3%ADn,+Antioquia/@6.200539,-75.5916835,12z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x8e4428069322b7ad:0x581e195430a4e0e2!2m2!1d-75.532123!2d6.213039!1m5!1m1!1s0x8e4428dfb80fad05:0x42137cfcc7b53b56!2m2!1d-75.5658153!2d6.2476376?entry=ttu&amp;g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D">
+                        Ver en Google Maps
+                    </a>
+                </p>
 
-            <p>
-                <a href="https://www.google.com/maps/dir/Mirador+La+Paloma,+Medell%C3%ADn,+Santa+Elena,+Medell%C3%ADn,+Antioquia/Medell%C3%ADn,+Antioquia/@6.200539,-75.5916835,12z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x8e4428069322b7ad:0x581e195430a4e0e2!2m2!1d-75.532123!2d6.213039!1m5!1m1!1s0x8e4428dfb80fad05:0x42137cfcc7b53b56!2m2!1d-75.5658153!2d6.2476376?entry=ttu&amp;g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D">
-                    Ver en Google Maps
-                </a>
-            </p>
+                <p>
+                    <strong>Ruta de 10 km</strong>, nivel intermedio,
+                    duración aproximada de 2 horas.
+                    <strong>Incluye guía certificado y equipo de seguridad.</strong>
+                </p>
 
-            <p>
-                <strong>Ruta de 10 km</strong>, nivel intermedio,
-                duración aproximada de 2 horas.
-                <strong>Incluye guía certificado y equipo de seguridad.</strong>
-            </p>
+                <p>
+                    <a href="paginas/tarifas.html#recorridos">
+                        Consulta los precios de los recorridos guiados
+                    </a>
+                </p>
+            </article>
 
-            <p>
-                <a href="paginas/tarifas.html#recorridos">
-                    Consulta los precios de los recorridos guiados
-                </a>
-            </p>
+            <article id="seguro-asistencia">
+                <h3>Seguro y servicio de ayuda</h3>
 
-            <ul>
-                <li>Seguro y servicio de ayuda</li>
-            </ul>
-
-            <p>
-                <strong>Contamos con un seguro de responsabilidad civil</strong>
-                que cubre cualquier accidente o daño a terceros durante el uso
-                de nuestras bicicletas. Además, ofrecemos un servicio de
-                asistencia en carretera para cualquier eventualidad que pueda
-                surgir durante el alquiler.
-            </p>
+                <p>
+                    <strong>Contamos con un seguro de responsabilidad civil</strong>
+                    que cubre cualquier accidente o daño a terceros durante el uso
+                    de nuestras bicicletas. Además, ofrecemos un servicio de
+                    asistencia en carretera para cualquier eventualidad que pueda
+                    surgir durante el alquiler.
+                </p>
+            </article>
         </section>
 
         <section id="como-alquilar">
@@ -142,8 +139,10 @@
                 <li>Completa el formulario de reserva con tus datos personales.</li>
                 <li>Realiza el pago a través de nuestra plataforma segura.</li>
             </ol>
+        </section>
 
-            <h3>Beneficios</h3>
+        <section id="beneficios">
+            <h2>Beneficios</h2>
 
             <ul>
                 <li>Disponibilidad de bicicletas para todos los niveles y edades.</li>
