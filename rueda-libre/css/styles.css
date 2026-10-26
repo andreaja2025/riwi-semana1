@@ -14,6 +14,8 @@
     --espacio-grande: 2rem;
 }
 
+/* Estilos generales */
+
 body {
     margin: 0;
     font-family: var(--texto);
@@ -34,6 +36,8 @@ h2 {
     border-left: 5px solid var(--naranja);
     padding-left: var(--espacio-pequeno);
 }
+
+/* Encabezado y navegación */
 
 header {
     background-color: var(--crema);
@@ -57,7 +61,9 @@ nav ul {
     margin-bottom: var(--espacio-pequeno);
 }
 
-nav a {
+/* Selector descendiente para los enlaces del menú */
+
+#menu a {
     display: inline-block;
     color: var(--azul);
     font-weight: 600;
@@ -67,10 +73,27 @@ nav a {
     transition: background-color 0.2s, color 0.2s;
 }
 
-nav a:hover {
+/* Enlace de la página actual: resuelve el conflicto de especificidad */
+
+#menu a.activo {
     color: var(--blanco);
     background-color: var(--verde);
+    font-weight: 600;
 }
+
+/* Estados de interacción del menú */
+
+#menu a:hover {
+    color: var(--azul);
+    background-color: var(--naranja);
+}
+
+#menu a:focus {
+    outline: 3px solid var(--azul);
+    outline-offset: 3px;
+}
+
+/* Contenido principal */
 
 main {
     max-width: 1200px;
@@ -91,6 +114,8 @@ strong, label, th, legend {
     font-weight: 600;
 }
 
+/* Enlaces generales */
+
 a {
     text-underline-offset: 0.2em;
 }
@@ -104,12 +129,54 @@ main a:hover {
     color: var(--azul);
 }
 
+main a:focus {
+    outline: 3px solid var(--azul);
+    outline-offset: 3px;
+}
+
+/* Enlaces de llamada a la acción con apariencia de botón */
+
+.enlace-boton {
+    display: inline-block;
+    padding: var(--espacio-pequeno) var(--espacio-normal);
+    color: var(--blanco);
+    background-color: var(--verde);
+    border: 2px solid var(--verde);
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+main a.enlace-boton {
+    color: var(--blanco);
+}
+
+.enlace-boton:hover {
+    color: var(--azul);
+    background-color: var(--naranja);
+    border-color: var(--naranja);
+}
+
+main a.enlace-boton:hover {
+    color: var(--azul);
+}
+
+.enlace-boton:focus {
+    outline: 3px solid var(--azul);
+    outline-offset: 3px;
+}
+
+/* Imágenes */
+
 img {
     display: block;
     max-width: 100%;
     height: auto;
     border-radius: 8px;
 }
+
+/* Tablas */
 
 table {
     width: 100%;
@@ -142,6 +209,8 @@ tbody tr:nth-child(even) {
     background-color: var(--crema);
 }
 
+/* Formularios */
+
 fieldset {
     border: 1px solid var(--gris);
     border-left: 4px solid var(--verde);
@@ -166,13 +235,22 @@ input, select, textarea {
     margin-bottom: var(--espacio-pequeno);
 }
 
-input:focus, select:focus, textarea:focus {
-    border-color: var(--verde);
+/* Foco visible en los campos del formulario */
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--azul);
+    outline: 3px solid var(--azul);
+    outline-offset: 2px;
 }
 
-input[type="checkbox"], input[type="radio"] {
+input[type="checkbox"],
+input[type="radio"] {
     accent-color: var(--verde);
 }
+
+/* Botones */
 
 button {
     font: inherit;
@@ -192,14 +270,23 @@ button:hover {
     border-color: var(--naranja);
 }
 
+button:focus {
+    outline: 3px solid var(--azul);
+    outline-offset: 3px;
+}
+
+/* Indicador de foco para otros elementos interactivos */
+
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-    outline: 3px solid var(--naranja);
+    outline: 3px solid var(--azul);
     outline-offset: 3px;
 }
+
+/* Pie de página */
 
 footer {
     background-color: var(--azul);
@@ -208,7 +295,8 @@ footer {
     border-top: 5px solid var(--verde);
 }
 
-footer h2, footer h3 {
+footer h2,
+footer h3 {
     color: var(--crema);
 }
 
@@ -220,6 +308,13 @@ footer a {
 footer a:hover {
     color: var(--naranja);
 }
+
+footer a:focus {
+    outline: 3px solid var(--crema);
+    outline-offset: 3px;
+}
+
+/* Diseño adaptable a pantallas pequeñas */
 
 @media (max-width: 600px) {
     header {

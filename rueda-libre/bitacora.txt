@@ -222,3 +222,9 @@ Creé el archivo css/styles.css y lo enlacé en las tres páginas usando las rut
 Definí variables para los colores, las fuentes y los espacios. Apliqué los estilos al cuerpo, los encabezados, las tablas, los formularios y los enlaces, usando las combinaciones de colores aprobadas. También agregué ajustes para pantallas pequeñas.
 En DevTools, en Styles y Computed, comprobé que los párrafos heredan la fuente y el color del body. En cambio, el margen no se hereda automáticamente.
 Revisé los HTML para evitar estilos en línea y etiquetas style. Finalmente, guardé los cambios para realizar el commit y el push.
+
+Punto: Navegación, pseudoclases y especificidad
+
+Agregué el id menu y la clase activo para identificar la página actual en cada menú. También definí los estados hover y focus para enlaces, botones y campos del formulario, y creé la clase enlace-boton para destacar las llamadas a la acción.
+En DevTools revisé el conflicto entre #menu a y .activo. El primero tiene especificidad (1, 0, 1) y el segundo (0, 1, 0), por lo que el selector con ID prevalece al definir el color. Ajusté las reglas sin utilizar !important.
+Comprobé los estados con :hov y recorrí las páginas con Tab para revisar la visibilidad del foco.
