@@ -18,40 +18,52 @@
 </head>
 
 <body>
-    <header>
-        <a href="index.html" aria-label="Rueda Libre, ir al inicio">
-            <img
-                src="img/bicycle.png"
-                alt="Logotipo de Rueda Libre"
-                width="200"
-                height="200"
-            >
-        </a>
 
-        <h1>Rueda Libre</h1>
+    <!-- Encabezado y navegación -->
+    <header>
+
+        <div class="marca">
+            <a href="index.html" aria-label="Rueda Libre, ir al inicio">
+                <img
+                    src="img/bicycle.png"
+                    alt="Logotipo de Rueda Libre"
+                    width="200"
+                    height="200"
+                >
+            </a>
+
+            <h1>Rueda Libre</h1>
+        </div>
 
         <nav aria-label="Navegación principal">
             <ul id="menu">
+
                 <li>
                     <a href="index.html" class="activo" aria-current="page">
                         Inicio
                     </a>
                 </li>
+
                 <li>
                     <a href="paginas/tarifas.html">
                         Consultar tarifas y recorridos
                     </a>
                 </li>
+
                 <li>
                     <a href="paginas/reservas.html">
                         Reservar una bicicleta
                     </a>
                 </li>
+
             </ul>
         </nav>
+
     </header>
 
+    <!-- Contenido principal -->
     <main id="contenido-principal">
+
         <section
             id="inicio"
             class="seccion"
@@ -203,6 +215,7 @@
                     eventualidades durante el alquiler.
                 </p>
             </article>
+
         </section>
 
         <section
@@ -221,14 +234,17 @@
                         tarifas y los tipos de recorridos disponibles
                     </a>.
                 </li>
+
                 <li>
                     Selecciona la fecha de alquiler y el tipo de bicicleta.
                 </li>
+
                 <li>
                     <a href="paginas/reservas.html">
                         Completa el formulario con tus datos de reserva
                     </a>.
                 </li>
+
                 <li>
                     Sigue las instrucciones de pago que te proporcione
                     Rueda Libre.
@@ -271,25 +287,45 @@
                 </p>
             </address>
         </section>
+
     </main>
 
+    <!-- Pie de página organizado en tres bloques -->
     <footer>
-        <p>Rueda Libre</p>
 
-        <p>
-            Correo electrónico:
-            <a href="mailto:ruedalibre@gmail.com">
-                ruedalibre@gmail.com
-            </a>
-        </p>
+        <!-- Bloque 1: Marca -->
+        <div>
+            <h3>Rueda Libre</h3>
+            <p>
+                Alquiler de bicicletas y recorridos guiados en Medellín.
+            </p>
+        </div>
 
-        <p>
-            <a href="#contenido-principal">
-                Volver al contenido principal
-            </a>
-        </p>
+        <!-- Bloque 2: Contacto -->
+        <div>
+            <h3>Contacto</h3>
+            <p>
+                Correo electrónico:
+                <a href="mailto:ruedalibre@gmail.com">
+                    ruedalibre@gmail.com
+                </a>
+            </p>
+        </div>
 
-        <p>&copy; 2026 Rueda Libre. Todos los derechos reservados.</p>
+        <!-- Bloque 3: Navegación e información -->
+        <div>
+            <h3>Información</h3>
+            <p>
+                <a href="#contenido-principal">
+                    Volver al contenido principal
+                </a>
+            </p>
+
+            <p>
+                &copy; 2026 Rueda Libre. Todos los derechos reservados.
+            </p>
+        </div>
+
     </footer>
 
     <!-- Acceso flotante a WhatsApp -->
@@ -302,5 +338,6 @@
     >
         WhatsApp
     </a>
+
 </body>
 </html>
