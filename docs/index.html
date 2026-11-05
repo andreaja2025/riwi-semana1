@@ -21,7 +21,6 @@
 
     <!-- Encabezado y navegación -->
     <header>
-
         <div class="marca">
             <a href="index.html" aria-label="Rueda Libre, ir al inicio">
                 <img
@@ -37,7 +36,6 @@
 
         <nav aria-label="Navegación principal">
             <ul id="menu">
-
                 <li>
                     <a href="index.html" class="activo" aria-current="page">
                         Inicio
@@ -55,42 +53,201 @@
                         Reservar una bicicleta
                     </a>
                 </li>
-
             </ul>
         </nav>
-
     </header>
 
     <!-- Contenido principal -->
     <main id="contenido-principal">
 
+        <!-- Portada: texto e imagen en dos columnas -->
         <section
             id="inicio"
-            class="seccion"
+            class="seccion portada"
             aria-labelledby="titulo-inicio"
         >
-            <h2 id="titulo-inicio">¡Hola, somos Rueda Libre!</h2>
+            <div class="portada-contenido">
+                <h2 id="titulo-inicio">¡Hola, somos Rueda Libre!</h2>
+
+                <p>
+                    ¿Eres ciclista profesional, aficionado o quieres disfrutar
+                    de un fin de semana diferente?
+                    Aquí podrás encontrar la bicicleta que mejor se adapte a tus
+                    necesidades y alquilarla por el tiempo que desees.
+                </p>
+
+                <p>
+                    <a href="#contacto">
+                        Consultar información de contacto
+                    </a>
+                </p>
+
+                <p>
+                    <a href="paginas/reservas.html" class="enlace-boton">
+                        Reservar ahora
+                    </a>
+                </p>
+            </div>
+
+            <div class="portada-imagen">
+                <img
+                    src="img/byke.png"
+                    alt="Bicicleta disponible para alquilar en Rueda Libre"
+                    loading="eager"
+                >
+            </div>
+        </section>
+
+        <!-- Nuestra flota -->
+        <section
+            id="flota"
+            class="seccion"
+            aria-labelledby="titulo-flota"
+        >
+            <h2 id="titulo-flota">Nuestra flota</h2>
 
             <p>
-                ¿Eres ciclista profesional, aficionado o quieres disfrutar
-                de un fin de semana diferente?
-                Aquí podrás encontrar la bicicleta que mejor se adapte a tus
-                necesidades y alquilarla por el tiempo que desees.
+                Conoce nuestras bicicletas y encuentra la opción ideal
+                para recorrer Medellín a tu ritmo.
             </p>
 
-            <p>
-                <a href="#contacto">
-                    Consultar información de contacto
-                </a>
-            </p>
+            <div class="grid-flota">
+
+                <article class="tarjeta-bicicleta">
+                    <img src="img/urbana-clasica.jpg" alt="Bicicleta Urbana Clásica" loading="lazy">
+                    <h3>Urbana Clásica</h3>
+                    <p>Cómoda y liviana para las ciclorrutas.</p>
+                    <p class="precio">$10.000 <span>/ hora</span></p>
+                    <a href="paginas/reservas.html" class="enlace-boton">Reservar</a>
+                </article>
+
+                <article class="tarjeta-bicicleta">
+                    <img src="img/urbana-plegable.jpg" alt="Bicicleta Urbana Plegable" loading="lazy">
+                    <h3>Urbana Plegable</h3>
+                    <p>Se dobla en segundos; ideal para combinar con el metro.</p>
+                    <p class="precio">$12.000 <span>/ hora</span></p>
+                    <a href="paginas/reservas.html" class="enlace-boton">Reservar</a>
+                </article>
+
+                <article class="tarjeta-bicicleta">
+                    <img src="img/montana-trail.jpg" alt="Bicicleta de montaña Trail" loading="lazy">
+                    <h3>Montaña Trail</h3>
+                    <p>Suspensión delantera y 21 cambios para las subidas.</p>
+                    <p class="precio">$15.000 <span>/ hora</span></p>
+                    <a href="paginas/reservas.html" class="enlace-boton">Reservar</a>
+                </article>
+
+                <article class="tarjeta-bicicleta">
+                    <img src="img/gravel-aventura.jpg" alt="Bicicleta Gravel Aventura" loading="lazy">
+                    <h3>Gravel Aventura</h3>
+                    <p>Para rutas mixtas de asfalto y destapado.</p>
+                    <p class="precio">$18.000 <span>/ hora</span></p>
+                    <a href="paginas/reservas.html" class="enlace-boton">Reservar</a>
+                </article>
+
+                <article class="tarjeta-bicicleta">
+                    <img src="img/electrica-urbana.jpg" alt="Bicicleta Eléctrica Urbana" loading="lazy">
+                    <h3>Eléctrica Urbana</h3>
+                    <p>Asistencia eléctrica con 45 km de autonomía.</p>
+                    <p class="precio">$25.000 <span>/ hora</span></p>
+                    <a href="paginas/reservas.html" class="enlace-boton">Reservar</a>
+                </article>
+
+                <article class="tarjeta-bicicleta">
+                    <img src="img/infantil.jpg" alt="Bicicleta Infantil" loading="lazy">
+                    <h3>Infantil</h3>
+                    <p>Para niños de 6 a 10 años.</p>
+                    <p class="precio">$8.000 <span>/ hora</span></p>
+                    <a href="paginas/reservas.html" class="enlace-boton">Reservar</a>
+                </article>
+
+                <article class="tarjeta-bicicleta">
+                    <img src="img/tandem.jpg" alt="Bicicleta Tándem para dos personas" loading="lazy">
+                    <h3>Tándem</h3>
+                    <p>Para dos personas; perfecta para pasear en pareja.</p>
+                    <p class="precio">$20.000 <span>/ hora</span></p>
+                    <a href="paginas/reservas.html" class="enlace-boton">Reservar</a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Galería de rutas guiadas -->
+        <section
+            id="galeria-rutas"
+            class="seccion"
+            aria-labelledby="titulo-rutas"
+        >
+            <h2 id="titulo-rutas">Nuestras rutas</h2>
 
             <p>
-                <a href="paginas/reservas.html" class="enlace-boton">
-                    Reservar ahora
+                Descubre Medellín y sus alrededores con nuestros recorridos
+                guiados. Elige la ruta que mejor se adapte a tu experiencia.
+            </p>
+
+            <div class="grid-rutas">
+
+                <article class="tarjeta-ruta">
+                    <img
+                        src="img/rio-parques.jpg"
+                        alt="Paisaje natural de la ruta Río y Parques"
+                        loading="lazy"
+                    >
+
+                    <div class="contenido-ruta">
+                        <h3>Río y Parques</h3>
+                        <p>
+                            Un recorrido para disfrutar de los espacios verdes
+                            y los paisajes urbanos de Medellín.
+                        </p>
+                        <p><strong>Nivel:</strong> Principiante</p>
+                    </div>
+                </article>
+
+                <article class="tarjeta-ruta">
+                    <img
+                        src="img/sabores-barrio.jpg"
+                        alt="Paisaje natural de la ruta Sabores de Barrio"
+                        loading="lazy"
+                    >
+
+                    <div class="contenido-ruta">
+                        <h3>Sabores de Barrio</h3>
+                        <p>
+                            Explora diferentes sectores de la ciudad y conoce
+                            su cultura y gastronomía.
+                        </p>
+                        <p><strong>Nivel:</strong> Intermedio</p>
+                    </div>
+                </article>
+
+                <article class="tarjeta-ruta">
+                    <img
+                        src="img/reto-palmas.jpg"
+                        alt="Paisaje natural de la ruta Reto Las Palmas"
+                        loading="lazy"
+                    >
+
+                    <div class="contenido-ruta">
+                        <h3>Reto Las Palmas</h3>
+                        <p>
+                            Un desafío para quienes disfrutan las subidas
+                            y los recorridos exigentes.
+                        </p>
+                        <p><strong>Nivel:</strong> Avanzado</p>
+                    </div>
+                </article>
+
+            </div>
+
+            <p>
+                <a href="paginas/tarifas.html#recorridos">
+                    Consultar tarifas de los recorridos
                 </a>
             </p>
         </section>
 
+        <!-- Presentación -->
         <section
             id="presentacion"
             class="seccion"
@@ -108,6 +265,7 @@
             </p>
         </section>
 
+        <!-- Servicios -->
         <section
             id="servicios"
             class="seccion"
@@ -135,7 +293,6 @@
                 >
             </article>
 
-            <!-- Servicio de bicicletas eléctricas -->
             <article
                 id="bicicletas-electricas"
                 class="tarjeta-servicio tarjeta-electrica"
@@ -152,9 +309,7 @@
                 </p>
 
                 <p>
-                    <a href="paginas/tarifas.html">
-                        Consultar tarifas
-                    </a>
+                    <a href="paginas/tarifas.html">Consultar tarifas</a>
                 </p>
 
                 <p>
@@ -179,7 +334,7 @@
 
                 <p>
                     <a
-                        href="https://www.google.com/maps/dir/Mirador+La+Paloma,+Medell%C3%ADn,+Santa+Elena,+Medell%C3%ADn,+Antioquia/Medell%C3%ADn,+Antioquia/@6.200539,-75.5916835,12z/data=!3m1!4b1!4m13!1m5!1m1!1s0x8e4428069322b7ad:0x581e195430a4e0e2!2m2!1d-75.532123!2d6.213039!1m5!1m1!1s0x8e4428dfb80fad05:0x42137cfcc7b53b56!2m2!1d-75.5658153!2d6.2476376?entry=ttu&amp;g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D"
+                        href="https://www.google.com/maps/dir/Mirador+La+Paloma,+Medell%C3%ADn,+Santa+Elena,+Medell%C3%ADn,+Antioquia/Medell%C3%ADn,+Antioquia/@6.200539,-75.5916835,12z/data=!3m1!4b1!4m13!1m5!1m1!1s0x8e4428069322b7ad:0x581e195430a4e0e2!2m2!1d-75.532123!2d6.213039!1m5!1m1!1s0x8e4428dfb80fad05:0x42137cfcc7b53b56!2m2!1d-75.5658153!2d6.2476376?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
@@ -215,9 +370,9 @@
                     eventualidades durante el alquiler.
                 </p>
             </article>
-
         </section>
 
+        <!-- Cómo alquilar -->
         <section
             id="como-alquilar"
             class="seccion"
@@ -252,6 +407,7 @@
             </ol>
         </section>
 
+        <!-- Beneficios -->
         <section
             id="beneficios"
             class="seccion"
@@ -266,6 +422,7 @@
             </ul>
         </section>
 
+        <!-- Contacto -->
         <section
             id="contacto"
             class="seccion"
@@ -290,10 +447,8 @@
 
     </main>
 
-    <!-- Pie de página organizado en tres bloques -->
+    <!-- Pie de página -->
     <footer>
-
-        <!-- Bloque 1: Marca -->
         <div>
             <h3>Rueda Libre</h3>
             <p>
@@ -301,7 +456,6 @@
             </p>
         </div>
 
-        <!-- Bloque 2: Contacto -->
         <div>
             <h3>Contacto</h3>
             <p>
@@ -312,9 +466,9 @@
             </p>
         </div>
 
-        <!-- Bloque 3: Navegación e información -->
         <div>
             <h3>Información</h3>
+
             <p>
                 <a href="#contenido-principal">
                     Volver al contenido principal
@@ -325,7 +479,6 @@
                 &copy; 2026 Rueda Libre. Todos los derechos reservados.
             </p>
         </div>
-
     </footer>
 
     <!-- Acceso flotante a WhatsApp -->
