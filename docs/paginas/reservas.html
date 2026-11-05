@@ -24,64 +24,107 @@
         crossorigin="anonymous"
     >
 
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    >
+
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <body>
     <header>
-        <div class="marca">
-            <a href="../index.html" aria-label="Rueda Libre, ir al inicio">
-                <img
-                    src="../img/bicycle.png"
-                    alt="Logotipo de Rueda Libre"
-                    width="200"
-                    height="200"
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html" aria-label="Rueda Libre, ir al inicio">
+                    <img src="../img/bicycle.png" alt="" width="45" height="45">
+                    <span>Rueda Libre</span>
+                </a>
+
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal"
+                    aria-expanded="false"
+                    aria-label="Abrir o cerrar menú"
                 >
-            </a>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <h1>Reserva tu bicicleta</h1>
-        </div>
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">
+                                <i class="bi bi-house-door-fill me-1" aria-hidden="true"></i>
+                                Inicio
+                            </a>
+                        </li>
 
-        <nav aria-label="Navegación principal">
-            <ul id="menu">
-                <li>
-                    <a href="../index.html">Inicio</a>
-                </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tarifas.html">
+                                <i class="bi bi-tags-fill me-1" aria-hidden="true"></i>
+                                Tarifas y recorridos
+                            </a>
+                        </li>
 
-                <li>
-                    <a href="tarifas.html">
-                        Consultar tarifas y recorridos
-                    </a>
-                </li>
-
-                <li>
-                    <a
-                        href="reservas.html"
-                        class="activo"
-                        aria-current="page"
-                    >
-                        Reservas
-                    </a>
-                </li>
-            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="reservas.html" aria-current="page">
+                                <i class="bi bi-calendar-check-fill me-1" aria-hidden="true"></i>
+                                Reservas
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
     <main id="contenido-principal">
-        <div class="container-fluid py-4">
+        <section class="container portada-marca my-4" aria-labelledby="titulo-principal">
+            <div class="text-center">
+                <h1 id="titulo-principal" class="titulo-seccion">
+                    Reserva tu bicicleta
+                </h1>
+
+                <p class="lead mb-0">
+                    Completa tus datos y prepara tu próxima experiencia sobre ruedas.
+                </p>
+            </div>
+        </section>
+
+        <div class="container py-4">
             <div class="row g-4">
                 <section
                     id="formulario-reserva"
-                    class="seccion col-12 col-md-8"
+                    class="col-12 col-lg-8"
                     aria-labelledby="titulo-formulario"
                 >
-                    <h2 id="titulo-formulario">Formulario de reserva</h2>
+                    <h2 id="titulo-formulario" class="titulo-seccion">
+                        Formulario de reserva
+                    </h2>
 
                     <p>
                         Completa los campos obligatorios para solicitar el alquiler
                         de tu bicicleta. Los campos marcados como obligatorios deben
-                        diligenciarse antes de enviar el formulario.
+                        diligenciarse antes de continuar.
                     </p>
+
+                    <div class="alert alert-info alert-dismissible fade show" role="alert">
+                        <strong>¡Recuerda!</strong> Debes presentar tu documento de
+                        identidad original al momento de recoger la bicicleta.
+                        <strong>Importante:</strong> este formulario realiza
+                        validaciones en el navegador, pero no registra ni envía
+                        reservas porque el sitio todavía no tiene un servidor conectado.
+
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="alert"
+                            aria-label="Cerrar aviso"
+                        ></button>
+                    </div>
 
                     <p>
                         ¿Quieres conocer los precios antes de reservar?
@@ -90,8 +133,8 @@
                         </a>
                     </p>
 
-                    <form action="#" method="post">
-                        <fieldset>
+                    <form action="#" method="post" class="needs-validation" novalidate>
+                        <fieldset class="mb-4">
                             <legend>Tus datos</legend>
 
                             <div class="row g-3">
@@ -109,6 +152,10 @@
                                         minlength="3"
                                         required
                                     >
+
+                                    <div class="invalid-feedback">
+                                        Ingresa tu nombre completo con al menos 3 caracteres.
+                                    </div>
                                 </div>
 
                                 <div class="col-12 col-md-6">
@@ -125,13 +172,12 @@
                                         inputmode="numeric"
                                         pattern="[0-9]{6,10}"
                                         title="Ingresa entre 6 y 10 dígitos numéricos, sin puntos ni espacios."
-                                        aria-describedby="ayuda-documento"
                                         required
                                     >
 
-                                    <small id="ayuda-documento" class="form-text">
-                                        Entre 6 y 10 números.
-                                    </small>
+                                    <div class="invalid-feedback">
+                                        Ingresa un documento de entre 6 y 10 números, sin puntos ni espacios.
+                                    </div>
                                 </div>
 
                                 <div class="col-12 col-md-6">
@@ -148,13 +194,12 @@
                                         inputmode="numeric"
                                         pattern="3[0-9]{9}"
                                         title="Ingresa 10 dígitos y comienza por 3. Ejemplo: 3001234567."
-                                        aria-describedby="ayuda-celular"
                                         required
                                     >
 
-                                    <small id="ayuda-celular" class="form-text">
-                                        10 dígitos, comienza por 3.
-                                    </small>
+                                    <div class="invalid-feedback">
+                                        Ingresa un celular de 10 dígitos que comience por 3.
+                                    </div>
                                 </div>
 
                                 <div class="col-12">
@@ -170,11 +215,15 @@
                                         autocomplete="email"
                                         required
                                     >
+
+                                    <div class="invalid-feedback">
+                                        Escribe un correo válido, por ejemplo usuario@correo.com.
+                                    </div>
                                 </div>
                             </div>
                         </fieldset>
 
-                        <fieldset>
+                        <fieldset class="mb-4">
                             <legend>Tu alquiler</legend>
 
                             <div class="row g-3">
@@ -190,14 +239,12 @@
                                         name="fecha"
                                         min="2026-10-26"
                                         max="2026-12-31"
-                                        aria-describedby="ayuda-fecha"
                                         required
                                     >
 
-                                    <small id="ayuda-fecha" class="form-text">
-                                        Selecciona una fecha entre el 26 de octubre
-                                        y el 31 de diciembre de 2026.
-                                    </small>
+                                    <div class="invalid-feedback">
+                                        Selecciona una fecha entre el 26 de octubre y el 31 de diciembre de 2026.
+                                    </div>
                                 </div>
 
                                 <div class="col-12">
@@ -226,6 +273,7 @@
                                                 id="montana"
                                                 name="tipo_bicicleta"
                                                 value="montaña"
+                                                required
                                             >
 
                                             <label class="form-check-label" for="montana">
@@ -240,11 +288,16 @@
                                                 id="electrica"
                                                 name="tipo_bicicleta"
                                                 value="eléctrica"
+                                                required
                                             >
 
                                             <label class="form-check-label" for="electrica">
-                                                Eléctrica (servicio nuevo)
+                                                Eléctrica
                                             </label>
+
+                                            <div class="invalid-feedback">
+                                                Selecciona una de las tres opciones de bicicleta.
+                                            </div>
                                         </div>
                                     </fieldset>
                                 </div>
@@ -265,6 +318,10 @@
                                         <option value="medio día">Medio día (4 horas)</option>
                                         <option value="día completo">Día completo</option>
                                     </select>
+
+                                    <div class="invalid-feedback">
+                                        Selecciona el tiempo durante el cual alquilarás la bicicleta.
+                                    </div>
                                 </div>
 
                                 <div class="col-12 col-md-6">
@@ -283,6 +340,10 @@
                                         value="1"
                                         required
                                     >
+
+                                    <div class="invalid-feedback">
+                                        Ingresa una cantidad entre 1 y 6 bicicletas.
+                                    </div>
                                 </div>
 
                                 <div class="col-12">
@@ -334,47 +395,58 @@
                             </div>
                         </fieldset>
 
-                        <fieldset>
+                        <fieldset class="mb-4">
                             <legend>Confirmación</legend>
 
-                            <div class="form-check">
-                                <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    id="politicas"
-                                    name="acepta_politicas"
-                                    value="si"
-                                    required
-                                >
+                            <div class="d-flex flex-wrap align-items-center gap-3">
+                                <div class="form-check">
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        id="politicas"
+                                        name="acepta_politicas"
+                                        value="si"
+                                        required
+                                    >
 
-                                <label class="form-check-label" for="politicas">
-                                    Acepto las políticas de alquiler (obligatorio).
-                                </label>
+                                    <label class="form-check-label" for="politicas">
+                                        Acepto las políticas de alquiler (obligatorio).
+                                    </label>
+
+                                    <div class="invalid-feedback">
+                                        Debes aceptar las políticas de alquiler para continuar.
+                                    </div>
+                                </div>
+
+                                <button
+                                    type="button"
+                                    class="btn btn-outline-primary btn-sm"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#modalPoliticas"
+                                >
+                                    Leer políticas de alquiler
+                                </button>
                             </div>
                         </fieldset>
 
                         <p>
-                            <button type="submit">
+                            <button type="submit" class="btn btn-naranja-pedal btn-lg">
                                 Enviar solicitud de reserva
                             </button>
                         </p>
                     </form>
-
-                    <p>
-                        <strong>Importante:</strong> este formulario realiza
-                        validaciones en el navegador, pero todavía no guarda ni envía
-                        reservas a un servidor.
-                    </p>
                 </section>
 
                 <aside
                     id="informacion-contacto"
-                    class="seccion col-12 col-md-4"
+                    class="col-12 col-lg-4"
                     aria-labelledby="titulo-contacto"
                 >
-                    <h2 id="titulo-contacto">Información de contacto</h2>
+                    <h2 id="titulo-contacto" class="titulo-seccion">
+                        Información de contacto
+                    </h2>
 
-                    <h3>Horario de atención</h3>
+                    <h3 class="h5">Horario de atención</h3>
 
                     <dl>
                         <dt>Lunes a viernes</dt>
@@ -384,7 +456,7 @@
                         <dd>6:00 a. m. a 2:00 p. m.</dd>
                     </dl>
 
-                    <h3>¿Tienes dudas?</h3>
+                    <h3 class="h5">¿Tienes dudas?</h3>
 
                     <p>
                         Para consultar la disponibilidad de bicicletas o resolver
@@ -393,11 +465,12 @@
 
                     <p>
                         <a href="mailto:ruedalibre@gmail.com">
+                            <i class="bi bi-envelope-fill me-1" aria-hidden="true"></i>
                             ruedalibre@gmail.com
                         </a>
                     </p>
 
-                    <h3>Más información</h3>
+                    <h3 class="h5">Más información</h3>
 
                     <ul>
                         <li>
@@ -417,7 +490,70 @@
         </div>
     </main>
 
-    <footer>
+    <div
+        class="modal fade"
+        id="modalPoliticas"
+        tabindex="-1"
+        aria-labelledby="tituloModalPoliticas"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="tituloModalPoliticas">
+                        Políticas de alquiler
+                    </h2>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Cerrar ventana"
+                    ></button>
+                </div>
+
+                <div class="modal-body">
+                    <p>
+                        Antes de alquilar una bicicleta, ten en cuenta las siguientes condiciones:
+                    </p>
+
+                    <ol>
+                        <li class="mb-2">
+                            Presenta tu documento de identidad original al recoger la bicicleta.
+                        </li>
+
+                        <li class="mb-2">
+                            Revisa la bicicleta con el asesor antes de salir.
+                        </li>
+
+                        <li class="mb-2">
+                            Cada 15 minutos de retraso en la devolución tienen un recargo de $5.000.
+                        </li>
+
+                        <li class="mb-2">
+                            Los daños por mal uso se cobran según el costo de la reparación.
+                        </li>
+
+                        <li>
+                            Los menores de edad deben estar acompañados por un adulto responsable.
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="modal-footer">
+                    <button
+                        type="button"
+                        class="btn btn-primary"
+                        data-bs-dismiss="modal"
+                    >
+                        Entendido
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="pie-marca">
         <div>
             <h3>Rueda Libre</h3>
             <p>Alquiler de bicicletas y recorridos guiados en Medellín.</p>
@@ -427,7 +563,7 @@
         <div>
             <h3>Contacto</h3>
             <p>
-                Correo electrónico:
+                <i class="bi bi-envelope-fill me-2" aria-hidden="true"></i>
                 <a href="mailto:ruedalibre@gmail.com">
                     ruedalibre@gmail.com
                 </a>
@@ -453,6 +589,7 @@
         rel="noopener noreferrer"
         aria-label="Contactar a Rueda Libre por WhatsApp (abre en otra pestaña)"
     >
+        <i class="bi bi-whatsapp me-1" aria-hidden="true"></i>
         WhatsApp
     </a>
 
@@ -461,5 +598,24 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"
     ></script>
+
+    <script>
+        (() => {
+            'use strict'
+
+            const forms = document.querySelectorAll('.needs-validation')
+
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
 </body>
 </html>

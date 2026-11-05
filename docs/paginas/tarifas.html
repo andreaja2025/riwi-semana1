@@ -24,59 +24,101 @@
         crossorigin="anonymous"
     >
 
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    >
+
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <body>
+
     <header>
-        <div class="marca">
-            <a href="../index.html" aria-label="Rueda Libre, ir al inicio">
-                <img
-                    src="../img/bicycle.png"
-                    alt="Logotipo de Rueda Libre"
-                    width="200"
-                    height="200"
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html" aria-label="Rueda Libre, ir al inicio">
+                    <img src="../img/bicycle.png" alt="" width="45" height="45">
+                    <span>Rueda Libre</span>
+                </a>
+
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal"
+                    aria-expanded="false"
+                    aria-label="Abrir o cerrar menú"
                 >
-            </a>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <h1>Tarifas de Rueda Libre</h1>
-        </div>
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">
+                                <i class="bi bi-house-door-fill me-1" aria-hidden="true"></i>
+                                Inicio
+                            </a>
+                        </li>
 
-        <nav aria-label="Navegación principal">
-            <ul id="menu">
-                <li>
-                    <a href="../index.html">Inicio</a>
-                </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="tarifas.html" aria-current="page">
+                                <i class="bi bi-tags-fill me-1" aria-hidden="true"></i>
+                                Tarifas y recorridos
+                            </a>
+                        </li>
 
-                <li>
-                    <a
-                        href="tarifas.html"
-                        class="activo"
-                        aria-current="page"
-                    >
-                        Tarifas y recorridos
-                    </a>
-                </li>
-
-                <li>
-                    <a href="reservas.html">
-                        Reservar una bicicleta
-                    </a>
-                </li>
-            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="reservas.html">
+                                <i class="bi bi-calendar-check-fill me-1" aria-hidden="true"></i>
+                                Reservas
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
     <main id="contenido-principal">
-        <div class="container-fluid py-4">
-            <div class="row g-4">
+
+        <section class="container portada-marca my-5" aria-labelledby="titulo-principal">
+            <div class="row align-items-center g-4">
                 <div class="col-12 col-lg-8">
+                    <h1 id="titulo-principal" class="display-5 titulo-seccion">
+                        Tarifas y recorridos
+                    </h1>
+
+                    <p class="lead mb-0">
+                        Conoce nuestros precios y encuentra la experiencia ideal para recorrer Medellín sobre ruedas.
+                    </p>
+                </div>
+
+                <div class="col-12 col-lg-4 text-center">
+                    <img
+                        src="../img/bicycle.png"
+                        class="img-fluid"
+                        alt=""
+                        width="150"
+                        height="150"
+                    >
+                </div>
+            </div>
+        </section>
+
+        <div class="container pb-5">
+            <div class="row g-4">
+
+                <div class="col-12 col-lg-8">
+
                     <section
                         id="tarifas"
-                        class="seccion"
+                        class="mb-5"
                         aria-labelledby="titulo-tarifas"
                     >
-                        <h2 id="titulo-tarifas">
+                        <h2 id="titulo-tarifas" class="titulo-seccion">
                             Tarifas de alquiler de bicicletas
                         </h2>
 
@@ -86,7 +128,7 @@
                         </p>
 
                         <div class="table-responsive">
-                            <table>
+                            <table class="table table-striped table-hover align-middle">
                                 <caption>
                                     Precios de alquiler según el tipo de bicicleta y el tiempo
                                 </caption>
@@ -125,19 +167,16 @@
                             </table>
                         </div>
 
-                        <p>
-                            <a href="reservas.html" class="enlace-boton">
-                                Reservar una bicicleta
-                            </a>
-                        </p>
+                        <a href="reservas.html" class="btn btn-primary mt-2">
+                            Reservar una bicicleta
+                        </a>
                     </section>
 
                     <section
                         id="recorridos"
-                        class="seccion"
                         aria-labelledby="titulo-recorridos"
                     >
-                        <h2 id="titulo-recorridos">
+                        <h2 id="titulo-recorridos" class="titulo-seccion">
                             Tarifas de recorridos guiados
                         </h2>
 
@@ -147,7 +186,7 @@
                         </p>
 
                         <div class="table-responsive">
-                            <table>
+                            <table class="table table-striped table-hover align-middle">
                                 <caption>
                                     Precios y características de los recorridos guiados por persona
                                 </caption>
@@ -190,21 +229,20 @@
                             </table>
                         </div>
 
-                        <p>
-                            <a href="reservas.html" class="enlace-boton">
-                                Reservar una bicicleta
-                            </a>
-                        </p>
+                        <a href="reservas.html" class="btn btn-naranja-pedal mt-2">
+                            Reservar un recorrido
+                        </a>
                     </section>
+
                 </div>
 
                 <div class="col-12 col-lg-4">
+
                     <aside
                         id="informacion-adicional"
-                        class="seccion"
                         aria-labelledby="titulo-informacion"
                     >
-                        <h2 id="titulo-informacion">
+                        <h2 id="titulo-informacion" class="titulo-seccion">
                             Información adicional
                         </h2>
 
@@ -217,42 +255,54 @@
                             a las 7:00 a. m.
                         </p>
 
-                        <section
-                            id="que-llevar"
-                            aria-labelledby="titulo-que-llevar"
-                        >
-                            <h3 id="titulo-que-llevar">¿Qué debes llevar?</h3>
+                        <h3 id="titulo-que-llevar" class="h5 mt-4">
+                            ¿Qué debes llevar?
+                        </h3>
 
-                            <ul>
-                                <li>Ropa cómoda.</li>
-                                <li>Agua para mantenerte hidratado.</li>
-                                <li>Protector solar.</li>
-                                <li>Documento de identidad.</li>
-                            </ul>
-                        </section>
+                        <ul>
+                            <li>Ropa cómoda.</li>
+                            <li>Agua para mantenerte hidratado.</li>
+                            <li>Protector solar.</li>
+                            <li>Documento de identidad.</li>
+                        </ul>
+
                     </aside>
+
                 </div>
             </div>
 
             <section
                 id="contacto"
-                class="seccion mt-4"
+                class="mt-5"
                 aria-labelledby="titulo-contacto"
             >
-                <h2 id="titulo-contacto">¿Tienes preguntas?</h2>
+                <div class="row align-items-center g-3">
+                    <div class="col-12 col-lg-8">
+                        <h2 id="titulo-contacto" class="titulo-seccion">
+                            ¿Tienes preguntas?
+                        </h2>
 
-                <p>
-                    Para consultar la disponibilidad de bicicletas o resolver
-                    dudas sobre las tarifas, escríbenos a
-                    <a href="mailto:ruedalibre@gmail.com">
-                        ruedalibre@gmail.com
-                    </a>.
-                </p>
+                        <p class="mb-lg-0">
+                            Para consultar la disponibilidad de bicicletas o resolver
+                            dudas sobre las tarifas, escríbenos a
+                            <a href="mailto:ruedalibre@gmail.com">
+                                <i class="bi bi-envelope-fill me-1" aria-hidden="true"></i>
+                                ruedalibre@gmail.com</a>.
+                        </p>
+                    </div>
+
+                    <div class="col-12 col-lg-4 text-lg-end">
+                        <a href="mailto:ruedalibre@gmail.com" class="btn btn-outline-primary">
+                            Escríbenos
+                        </a>
+                    </div>
+                </div>
             </section>
+
         </div>
     </main>
 
-    <footer>
+    <footer class="pie-marca">
         <div>
             <h3>Rueda Libre</h3>
             <p>Alquiler de bicicletas y recorridos guiados en Medellín.</p>
@@ -262,7 +312,7 @@
         <div>
             <h3>Contacto</h3>
             <p>
-                Correo electrónico:
+                <i class="bi bi-envelope-fill me-2" aria-hidden="true"></i>
                 <a href="mailto:ruedalibre@gmail.com">
                     ruedalibre@gmail.com
                 </a>
@@ -283,11 +333,12 @@
 
     <a
         class="whatsapp-flotante"
-        href="https://wa.me/573000000000"
+        href="https://wa.me/573332904656"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Contactar a Rueda Libre por WhatsApp (abre en otra pestaña)"
     >
+        <i class="bi bi-whatsapp me-1" aria-hidden="true"></i>
         WhatsApp
     </a>
 
@@ -296,6 +347,6 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"
     ></script>
+
 </body>
 </html>
-
