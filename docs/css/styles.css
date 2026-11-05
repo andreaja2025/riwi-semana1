@@ -16,15 +16,11 @@
     --ancho-contenido: 75rem;
 }
 
-/* Modelo de caja */
-
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
-
-/* Estilos generales */
 
 html {
     scroll-behavior: smooth;
@@ -72,10 +68,6 @@ legend {
     font-weight: 600;
 }
 
-/* =========================================
-   ENCABEZADO Y NAVEGACIÓN CON FLEXBOX
-   ========================================= */
-
 header {
     display: flex;
     flex-direction: row;
@@ -83,14 +75,11 @@ header {
     align-items: center;
     flex-wrap: wrap;
     gap: var(--espacio-normal);
-
     padding: var(--espacio-normal) var(--espacio-grande);
     color: var(--azul);
     background-color: var(--crema);
     border-bottom: 4px solid var(--verde);
 }
-
-/* Agrupación del logotipo y nombre */
 
 .marca {
     display: flex;
@@ -109,8 +98,6 @@ header {
     margin: 0;
 }
 
-/* Menú flexible */
-
 nav ul,
 #menu {
     display: flex;
@@ -119,7 +106,6 @@ nav ul,
     align-items: center;
     flex-wrap: wrap;
     gap: var(--espacio-normal);
-
     padding: 0;
     margin: 0;
     list-style: none;
@@ -144,10 +130,6 @@ nav ul,
     background-color: var(--naranja);
 }
 
-/* =========================================
-   CONTENIDO PRINCIPAL
-   ========================================= */
-
 main {
     width: 100%;
     max-width: var(--ancho-contenido);
@@ -162,53 +144,6 @@ aside,
     margin-bottom: var(--espacio-grande);
 }
 
-/* =========================================
-   PORTADA: GRID DE DOS COLUMNAS
-   ========================================= */
-
-#inicio {
-    min-height: 70vh;
-}
-
-.portada {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--espacio-grande);
-    align-items: center;
-}
-
-/* Contenido de texto de la portada */
-
-.portada-contenido {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.portada-contenido h2 {
-    margin-top: 0;
-}
-
-/* Imagen de la portada */
-
-.portada-imagen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.portada-imagen img {
-    display: block;
-    width: 100%;
-    height: 350px;
-    object-fit: contain;
-    border-radius: 8px;
-}
-
-/* =========================================
-   ENLACES Y BOTONES
-   ========================================= */
-
 a {
     text-underline-offset: 0.2em;
 }
@@ -221,8 +156,6 @@ main a {
 main a:hover {
     color: var(--azul);
 }
-
-/* Botones de llamada a la acción */
 
 .enlace-boton {
     display: inline-block;
@@ -247,8 +180,6 @@ main a.enlace-boton:hover {
     border-color: var(--naranja);
 }
 
-/* Imágenes generales */
-
 img {
     display: block;
     width: auto;
@@ -257,34 +188,13 @@ img {
     border-radius: 8px;
 }
 
-/* =========================================
-   NUESTRA FLOTA: CUADRÍCULA CON CSS GRID
-   ========================================= */
-
-.grid-flota {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--espacio-grande);
-
-    width: 100%;
-    align-items: stretch;
-}
-
-/* Tarjetas individuales de bicicletas */
-
 .tarjeta-bicicleta {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-
     padding: var(--espacio-normal);
     border: 1px solid var(--gris);
     border-radius: 8px;
     background-color: var(--blanco);
     min-width: 0;
 }
-
-/* Fotografías de las bicicletas */
 
 .tarjeta-bicicleta img {
     display: block;
@@ -295,20 +205,14 @@ img {
     border-radius: 6px;
 }
 
-/* Nombre de cada bicicleta */
-
 .tarjeta-bicicleta h3 {
     margin-top: 0;
     margin-bottom: var(--espacio-normal);
 }
 
-/* Descripción de cada bicicleta */
-
 .tarjeta-bicicleta p {
     margin-bottom: var(--espacio-normal);
 }
-
-/* Precio por hora */
 
 .tarjeta-bicicleta .precio {
     color: var(--verde);
@@ -322,40 +226,13 @@ img {
     font-weight: 400;
 }
 
-/* Botón de reserva al final de la tarjeta */
-
-.tarjeta-bicicleta .enlace-boton {
-    display: block;
-    width: 100%;
-    margin-top: auto;
-    text-align: center;
-}
-
-/* =========================================
-   GALERÍA NUESTRAS RUTAS: CSS GRID
-   ========================================= */
-
-.grid-rutas {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--espacio-grande);
-    align-items: stretch;
-}
-
-/* Tarjetas de las rutas */
-
 .tarjeta-ruta {
-    display: flex;
-    flex-direction: column;
-
     padding: var(--espacio-normal);
     border: 1px solid var(--gris);
     border-radius: 8px;
     background-color: var(--blanco);
     min-width: 0;
 }
-
-/* Fotografías de las rutas */
 
 .tarjeta-ruta img {
     display: block;
@@ -366,26 +243,9 @@ img {
     border-radius: 6px;
 }
 
-/* Contenido de cada ruta */
-
-.contenido-ruta {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
 .contenido-ruta h3 {
     margin-top: 0;
 }
-
-.contenido-ruta p:last-child {
-    margin-top: auto;
-    margin-bottom: 0;
-}
-
-/* =========================================
-   SERVICIOS
-   ========================================= */
 
 .tarjeta-servicio,
 #servicios article {
@@ -408,8 +268,6 @@ img {
     border-radius: 6px;
 }
 
-/* Etiqueta Nuevo */
-
 .tarjeta-electrica {
     position: relative;
 }
@@ -427,10 +285,6 @@ img {
     font-weight: 700;
 }
 
-/* =========================================
-   PÁGINA DE RESERVAS: GRID 2:1
-   ========================================= */
-
 .contenedor-reservas {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -438,16 +292,10 @@ img {
     align-items: start;
 }
 
-/* Formulario y bloque de contacto */
-
 #formulario-reserva,
 #informacion-contacto {
     min-width: 0;
 }
-
-/* =========================================
-   DOCUMENTO Y CELULAR: FLEXBOX
-   ========================================= */
 
 .fila-campos {
     display: flex;
@@ -464,10 +312,6 @@ img {
 .fila-campos input {
     width: 100%;
 }
-
-/* =========================================
-   WHATSAPP FLOTANTE
-   ========================================= */
 
 .whatsapp-flotante {
     position: fixed;
@@ -491,10 +335,6 @@ img {
     background-color: var(--naranja);
     border-color: var(--naranja);
 }
-
-/* =========================================
-   TABLAS DE TARIFAS Y RECORRIDOS
-   ========================================= */
 
 table {
     width: 100%;
@@ -526,10 +366,6 @@ thead th {
 tbody tr:nth-child(even) {
     background-color: var(--crema);
 }
-
-/* =========================================
-   FORMULARIOS
-   ========================================= */
 
 form {
     width: 100%;
@@ -585,8 +421,6 @@ input[type="radio"] {
     accent-color: var(--verde);
 }
 
-/* Alineación de opciones de selección */
-
 form fieldset fieldset p {
     display: flex;
     align-items: center;
@@ -611,8 +445,6 @@ small {
     font-size: 0.875rem;
 }
 
-/* Botones del formulario */
-
 button {
     display: inline-block;
     max-width: 100%;
@@ -633,10 +465,6 @@ button:hover {
     border-color: var(--naranja);
 }
 
-/* =========================================
-   FOCO VISIBLE Y ACCESIBILIDAD
-   ========================================= */
-
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -652,8 +480,6 @@ textarea:focus {
     border-color: var(--azul);
 }
 
-/* Información adicional y horarios */
-
 dt {
     margin-top: var(--espacio-normal);
     font-weight: 600;
@@ -663,10 +489,6 @@ dd {
     margin-left: var(--espacio-normal);
 }
 
-/* =========================================
-   PIE DE PÁGINA CON FLEXBOX
-   ========================================= */
-
 footer {
     display: flex;
     flex-direction: row;
@@ -674,7 +496,6 @@ footer {
     align-items: flex-start;
     flex-wrap: wrap;
     gap: var(--espacio-grande);
-
     padding: var(--espacio-grande);
     padding-bottom: 5rem;
     color: var(--crema);
@@ -704,10 +525,6 @@ footer a:focus-visible {
     outline: 3px solid var(--crema);
     outline-offset: 3px;
 }
-
-/* =========================================
-   AJUSTES RESPONSIVOS QUE YA TENÍA EL SITIO
-   ========================================= */
 
 @media (max-width: 600px) {
     header {
@@ -747,10 +564,6 @@ footer a:focus-visible {
 
     footer > div {
         width: 100%;
-    }
-
-    #inicio {
-        min-height: 70vh;
     }
 
     .tarjeta-servicio,
@@ -795,7 +608,15 @@ footer a:focus-visible {
     }
 }
 
-/* Respeto por la preferencia de movimiento reducido */
+@media (max-width: 767.98px) {
+    .contenedor-reservas {
+        grid-template-columns: 1fr;
+    }
+
+    .fila-campos {
+        flex-direction: column;
+    }
+}
 
 @media (prefers-reduced-motion: reduce) {
     html {

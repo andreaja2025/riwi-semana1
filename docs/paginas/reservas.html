@@ -17,6 +17,13 @@
         rel="stylesheet"
     >
 
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous"
+    >
+
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 
@@ -61,331 +68,352 @@
     </header>
 
     <main id="contenido-principal">
+        <div class="container-fluid py-4">
+            <div class="row g-4">
+                <section
+                    id="formulario-reserva"
+                    class="seccion col-12 col-md-8"
+                    aria-labelledby="titulo-formulario"
+                >
+                    <h2 id="titulo-formulario">Formulario de reserva</h2>
 
-        <div class="contenedor-reservas">
+                    <p>
+                        Completa los campos obligatorios para solicitar el alquiler
+                        de tu bicicleta. Los campos marcados como obligatorios deben
+                        diligenciarse antes de enviar el formulario.
+                    </p>
 
-            <!-- Columna izquierda: formulario (2fr) -->
-            <section
-                id="formulario-reserva"
-                class="seccion"
-                aria-labelledby="titulo-formulario"
-            >
-                <h2 id="titulo-formulario">Formulario de reserva</h2>
+                    <p>
+                        ¿Quieres conocer los precios antes de reservar?
+                        <a href="tarifas.html">
+                            Consulta las tarifas de alquiler y recorridos.
+                        </a>
+                    </p>
 
-                <p>
-                    Completa los campos obligatorios para solicitar el alquiler
-                    de tu bicicleta. Los campos marcados como obligatorios deben
-                    diligenciarse antes de enviar el formulario.
-                </p>
+                    <form action="#" method="post">
+                        <fieldset>
+                            <legend>Tus datos</legend>
 
-                <p>
-                    ¿Quieres conocer los precios antes de reservar?
-                    <a href="tarifas.html">
-                        Consulta las tarifas de alquiler y recorridos.
-                    </a>
-                </p>
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <label for="nombre" class="form-label">
+                                        Nombre completo (obligatorio):
+                                    </label>
 
-                <form action="#" method="post">
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="nombre"
+                                        name="nombre"
+                                        autocomplete="name"
+                                        minlength="3"
+                                        required
+                                    >
+                                </div>
 
-                    <fieldset>
-                        <legend>Tus datos</legend>
+                                <div class="col-12 col-md-6">
+                                    <label for="documento" class="form-label">
+                                        Número de documento (obligatorio):
+                                    </label>
 
-                        <p>
-                            <label for="nombre">
-                                Nombre completo (obligatorio):
-                            </label>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="documento"
+                                        name="documento"
+                                        autocomplete="off"
+                                        inputmode="numeric"
+                                        pattern="[0-9]{6,10}"
+                                        title="Ingresa entre 6 y 10 dígitos numéricos, sin puntos ni espacios."
+                                        aria-describedby="ayuda-documento"
+                                        required
+                                    >
 
-                            <input
-                                type="text"
-                                id="nombre"
-                                name="nombre"
-                                autocomplete="name"
-                                minlength="3"
-                                required
-                            >
-                        </p>
+                                    <small id="ayuda-documento" class="form-text">
+                                        Entre 6 y 10 números.
+                                    </small>
+                                </div>
 
-                        <!-- Documento y celular en una misma fila -->
-                        <div class="fila-campos">
+                                <div class="col-12 col-md-6">
+                                    <label for="celular" class="form-label">
+                                        Celular (obligatorio):
+                                    </label>
 
-                            <p>
-                                <label for="documento">
-                                    Número de documento (obligatorio):
-                                </label>
+                                    <input
+                                        type="tel"
+                                        class="form-control"
+                                        id="celular"
+                                        name="celular"
+                                        autocomplete="tel"
+                                        inputmode="numeric"
+                                        pattern="3[0-9]{9}"
+                                        title="Ingresa 10 dígitos y comienza por 3. Ejemplo: 3001234567."
+                                        aria-describedby="ayuda-celular"
+                                        required
+                                    >
 
-                                <input
-                                    type="text"
-                                    id="documento"
-                                    name="documento"
-                                    autocomplete="off"
-                                    inputmode="numeric"
-                                    pattern="[0-9]{6,10}"
-                                    title="Ingresa entre 6 y 10 dígitos numéricos, sin puntos ni espacios."
-                                    aria-describedby="ayuda-documento"
-                                    required
-                                >
+                                    <small id="ayuda-celular" class="form-text">
+                                        10 dígitos, comienza por 3.
+                                    </small>
+                                </div>
 
-                                <small id="ayuda-documento">
-                                    Entre 6 y 10 números.
-                                </small>
-                            </p>
+                                <div class="col-12">
+                                    <label for="correo" class="form-label">
+                                        Correo electrónico (obligatorio):
+                                    </label>
 
-                            <p>
-                                <label for="celular">
-                                    Celular (obligatorio):
-                                </label>
-
-                                <input
-                                    type="tel"
-                                    id="celular"
-                                    name="celular"
-                                    autocomplete="tel"
-                                    inputmode="numeric"
-                                    pattern="3[0-9]{9}"
-                                    title="Ingresa 10 dígitos y comienza por 3. Ejemplo: 3001234567."
-                                    aria-describedby="ayuda-celular"
-                                    required
-                                >
-
-                                <small id="ayuda-celular">
-                                    10 dígitos, comienza por 3.
-                                </small>
-                            </p>
-
-                        </div>
-
-                        <p>
-                            <label for="correo">
-                                Correo electrónico (obligatorio):
-                            </label>
-
-                            <input
-                                type="email"
-                                id="correo"
-                                name="correo"
-                                autocomplete="email"
-                                required
-                            >
-                        </p>
-                    </fieldset>
-
-                    <fieldset>
-                        <legend>Tu alquiler</legend>
-
-                        <p>
-                            <label for="fecha">
-                                Fecha del alquiler (obligatorio):
-                            </label>
-
-                            <input
-                                type="date"
-                                id="fecha"
-                                name="fecha"
-                                min="2026-10-26"
-                                max="2026-12-31"
-                                aria-describedby="ayuda-fecha"
-                                required
-                            >
-
-                            <small id="ayuda-fecha">
-                                Selecciona una fecha entre el 26 de octubre
-                                y el 31 de diciembre de 2026.
-                            </small>
-                        </p>
+                                    <input
+                                        type="email"
+                                        class="form-control"
+                                        id="correo"
+                                        name="correo"
+                                        autocomplete="email"
+                                        required
+                                    >
+                                </div>
+                            </div>
+                        </fieldset>
 
                         <fieldset>
-                            <legend>Tipo de bicicleta (obligatorio)</legend>
+                            <legend>Tu alquiler</legend>
 
-                            <p>
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <label for="fecha" class="form-label">
+                                        Fecha del alquiler (obligatorio):
+                                    </label>
+
+                                    <input
+                                        type="date"
+                                        class="form-control"
+                                        id="fecha"
+                                        name="fecha"
+                                        min="2026-10-26"
+                                        max="2026-12-31"
+                                        aria-describedby="ayuda-fecha"
+                                        required
+                                    >
+
+                                    <small id="ayuda-fecha" class="form-text">
+                                        Selecciona una fecha entre el 26 de octubre
+                                        y el 31 de diciembre de 2026.
+                                    </small>
+                                </div>
+
+                                <div class="col-12">
+                                    <fieldset>
+                                        <legend>Tipo de bicicleta (obligatorio)</legend>
+
+                                        <div class="form-check">
+                                            <input
+                                                class="form-check-input"
+                                                type="radio"
+                                                id="urbana"
+                                                name="tipo_bicicleta"
+                                                value="urbana"
+                                                required
+                                            >
+
+                                            <label class="form-check-label" for="urbana">
+                                                Urbana
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input
+                                                class="form-check-input"
+                                                type="radio"
+                                                id="montana"
+                                                name="tipo_bicicleta"
+                                                value="montaña"
+                                            >
+
+                                            <label class="form-check-label" for="montana">
+                                                Montaña
+                                            </label>
+                                        </div>
+
+                                        <div class="form-check">
+                                            <input
+                                                class="form-check-input"
+                                                type="radio"
+                                                id="electrica"
+                                                name="tipo_bicicleta"
+                                                value="eléctrica"
+                                            >
+
+                                            <label class="form-check-label" for="electrica">
+                                                Eléctrica (servicio nuevo)
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <label for="plan" class="form-label">
+                                        Plan de alquiler (obligatorio):
+                                    </label>
+
+                                    <select
+                                        class="form-select"
+                                        id="plan"
+                                        name="plan"
+                                        required
+                                    >
+                                        <option value="">Selecciona un plan</option>
+                                        <option value="1 hora">1 hora</option>
+                                        <option value="medio día">Medio día (4 horas)</option>
+                                        <option value="día completo">Día completo</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                    <label for="cantidad" class="form-label">
+                                        Cantidad de bicicletas (de 1 a 6):
+                                    </label>
+
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        id="cantidad"
+                                        name="cantidad"
+                                        min="1"
+                                        max="6"
+                                        step="1"
+                                        value="1"
+                                        required
+                                    >
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="recorrido" class="form-label">
+                                        Recorrido guiado (opcional):
+                                    </label>
+
+                                    <select
+                                        class="form-select"
+                                        id="recorrido"
+                                        name="recorrido"
+                                    >
+                                        <option value="ninguno" selected>
+                                            Sin recorrido guiado
+                                        </option>
+
+                                        <option value="rio-parques">
+                                            Río y Parques
+                                        </option>
+
+                                        <option value="sabores-barrio">
+                                            Sabores de Barrio
+                                        </option>
+
+                                        <option value="reto-palmas">
+                                            Reto Las Palmas
+                                        </option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="comentarios" class="form-label">
+                                        Comentarios (opcional):
+                                    </label>
+
+                                    <textarea
+                                        class="form-control"
+                                        id="comentarios"
+                                        name="comentarios"
+                                        rows="4"
+                                        maxlength="300"
+                                        aria-describedby="ayuda-comentarios"
+                                    ></textarea>
+
+                                    <small id="ayuda-comentarios" class="form-text">
+                                        Máximo 300 caracteres.
+                                    </small>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Confirmación</legend>
+
+                            <div class="form-check">
                                 <input
-                                    type="radio"
-                                    id="urbana"
-                                    name="tipo_bicicleta"
-                                    value="urbana"
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    id="politicas"
+                                    name="acepta_politicas"
+                                    value="si"
                                     required
                                 >
 
-                                <label for="urbana">Urbana</label>
-                            </p>
-
-                            <p>
-                                <input
-                                    type="radio"
-                                    id="montana"
-                                    name="tipo_bicicleta"
-                                    value="montaña"
-                                >
-
-                                <label for="montana">Montaña</label>
-                            </p>
-
-                            <p>
-                                <input
-                                    type="radio"
-                                    id="electrica"
-                                    name="tipo_bicicleta"
-                                    value="eléctrica"
-                                >
-
-                                <label for="electrica">
-                                    Eléctrica (servicio nuevo)
+                                <label class="form-check-label" for="politicas">
+                                    Acepto las políticas de alquiler (obligatorio).
                                 </label>
-                            </p>
+                            </div>
                         </fieldset>
 
                         <p>
-                            <label for="plan">
-                                Plan de alquiler (obligatorio):
-                            </label>
-
-                            <select id="plan" name="plan" required>
-                                <option value="">Selecciona un plan</option>
-                                <option value="1 hora">1 hora</option>
-                                <option value="medio día">Medio día (4 horas)</option>
-                                <option value="día completo">Día completo</option>
-                            </select>
+                            <button type="submit">
+                                Enviar solicitud de reserva
+                            </button>
                         </p>
-
-                        <p>
-                            <label for="cantidad">
-                                Cantidad de bicicletas (de 1 a 6):
-                            </label>
-
-                            <input
-                                type="number"
-                                id="cantidad"
-                                name="cantidad"
-                                min="1"
-                                max="6"
-                                step="1"
-                                value="1"
-                                required
-                            >
-                        </p>
-
-                        <p>
-                            <label for="recorrido">
-                                Recorrido guiado (opcional):
-                            </label>
-
-                            <select id="recorrido" name="recorrido">
-                                <option value="ninguno" selected>
-                                    Sin recorrido guiado
-                                </option>
-
-                                <option value="rio-parques">
-                                    Río y Parques
-                                </option>
-
-                                <option value="sabores-barrio">
-                                    Sabores de Barrio
-                                </option>
-
-                                <option value="reto-palmas">
-                                    Reto Las Palmas
-                                </option>
-                            </select>
-                        </p>
-
-                        <p>
-                            <label for="comentarios">
-                                Comentarios (opcional):
-                            </label>
-
-                            <textarea
-                                id="comentarios"
-                                name="comentarios"
-                                rows="4"
-                                maxlength="300"
-                                aria-describedby="ayuda-comentarios"
-                            ></textarea>
-
-                            <small id="ayuda-comentarios">
-                                Máximo 300 caracteres.
-                            </small>
-                        </p>
-                    </fieldset>
-
-                    <fieldset>
-                        <legend>Confirmación</legend>
-
-                        <p>
-                            <input
-                                type="checkbox"
-                                id="politicas"
-                                name="acepta_politicas"
-                                value="si"
-                                required
-                            >
-
-                            <label for="politicas">
-                                Acepto las políticas de alquiler (obligatorio).
-                            </label>
-                        </p>
-                    </fieldset>
+                    </form>
 
                     <p>
-                        <button type="submit">
-                            Enviar solicitud de reserva
-                        </button>
+                        <strong>Importante:</strong> este formulario realiza
+                        validaciones en el navegador, pero todavía no guarda ni envía
+                        reservas a un servidor.
                     </p>
-                </form>
+                </section>
 
-                <p>
-                    <strong>Importante:</strong> este formulario realiza
-                    validaciones en el navegador, pero todavía no guarda ni envía
-                    reservas a un servidor.
-                </p>
-            </section>
+                <aside
+                    id="informacion-contacto"
+                    class="seccion col-12 col-md-4"
+                    aria-labelledby="titulo-contacto"
+                >
+                    <h2 id="titulo-contacto">Información de contacto</h2>
 
-            <!-- Columna derecha: información de contacto (1fr) -->
-            <aside
-                id="informacion-contacto"
-                class="seccion"
-                aria-labelledby="titulo-contacto"
-            >
-                <h2 id="titulo-contacto">Información de contacto</h2>
+                    <h3>Horario de atención</h3>
 
-                <h3>Horario de atención</h3>
+                    <dl>
+                        <dt>Lunes a viernes</dt>
+                        <dd>7:00 a. m. a 7:00 p. m.</dd>
 
-                <dl>
-                    <dt>Lunes a viernes</dt>
-                    <dd>7:00 a. m. a 7:00 p. m.</dd>
+                        <dt>Sábados, domingos y festivos</dt>
+                        <dd>6:00 a. m. a 2:00 p. m.</dd>
+                    </dl>
 
-                    <dt>Sábados, domingos y festivos</dt>
-                    <dd>6:00 a. m. a 2:00 p. m.</dd>
-                </dl>
+                    <h3>¿Tienes dudas?</h3>
 
-                <h3>¿Tienes dudas?</h3>
+                    <p>
+                        Para consultar la disponibilidad de bicicletas o resolver
+                        dudas sobre el alquiler, escríbenos a:
+                    </p>
 
-                <p>
-                    Para consultar la disponibilidad de bicicletas o resolver
-                    dudas sobre el alquiler, escríbenos a:
-                </p>
-
-                <p>
-                    <a href="mailto:ruedalibre@gmail.com">
-                        ruedalibre@gmail.com
-                    </a>
-                </p>
-
-                <h3>Más información</h3>
-
-                <ul>
-                    <li>
-                        <a href="../index.html">
-                            Volver a la página de inicio
+                    <p>
+                        <a href="mailto:ruedalibre@gmail.com">
+                            ruedalibre@gmail.com
                         </a>
-                    </li>
+                    </p>
 
-                    <li>
-                        <a href="tarifas.html">
-                            Consultar tarifas y recorridos
-                        </a>
-                    </li>
-                </ul>
-            </aside>
+                    <h3>Más información</h3>
 
+                    <ul>
+                        <li>
+                            <a href="../index.html">
+                                Volver a la página de inicio
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="tarifas.html">
+                                Consultar tarifas y recorridos
+                            </a>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
         </div>
     </main>
 
@@ -418,7 +446,6 @@
         </div>
     </footer>
 
-    <!-- Acceso flotante a WhatsApp -->
     <a
         class="whatsapp-flotante"
         href="https://wa.me/573332904656"
@@ -428,5 +455,11 @@
     >
         WhatsApp
     </a>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"
+    ></script>
 </body>
 </html>
